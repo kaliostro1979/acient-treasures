@@ -2,8 +2,7 @@
 
 @import "variables";
 
-
-.side-card{
+.side-card__main{
   position: fixed;
   background-color: $white;
   width: 360px;
@@ -11,11 +10,19 @@
   bottom: 0;
   right: 0;
   z-index: 12;
+}
+
+.side-card{
   font-size: 13px;
+  overflow-y: scroll;
+  height: 100vh;
   &__header{
-    position: relative;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
     padding: 18px 20px;
-    background-color: rgba(32, 32, 32, 0.05);
+    background-color: rgba(237, 237, 237, 1);
     color: #B4B4B4;
     font-size: 13px;
     text-transform: uppercase;
@@ -65,16 +72,50 @@
           &:focus{
             outline: none;
           }
-          .dec{
-            border-top-left-radius: 6px;
-            border-bottom-left-radius: 6px;
-          }
+        }
+        .dec{
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+        .inc{
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
         }
         &__value{
           width: 61px;
           text-align: center;
           padding: 9px 0;
           border: 1px solid #D8D8D8;
+        }
+      }
+    }
+  }
+  &__footer{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 16px;
+    background-color: rgba(237, 237, 237, 1);
+    &__total{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__buttons{
+      margin-top: 12px;
+      ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+          padding: 14px 18px;
+          border: 1px solid $text_global_color;
+          border-radius: 6px;
+          &:hover{
+            background-color: $red;
+            color: $white;
+            border-color: $red;
+          }
         }
       }
     }

@@ -1,35 +1,29 @@
 import React from 'react'
+import SideShoppingCardItem from "./SideShoppingCardItem";
+import {Link} from "react-router-dom";
 
 const SideShoppingCard = ()=>{
     return(
-        <div className="side-card">
+        <div className="side-card__main">
             <div className="side-card__header">
                 <p>Cart (<span>8</span>items)</p>
                 <div className="side-card__header__close">
                     <img src="/assets/images/icons/close-dark.png" alt=""/>
                 </div>
             </div>
-            <div className="side-card__item">
-                <div className="side-card__item__pic" style={{ backgroundImage: `url(/assets/images/item-images/item-1.jpg)` }}>
-
+            <div className="side-card">
+                <SideShoppingCardItem/>
+            </div>
+            <div className="side-card__footer">
+                <div className="side-card__footer__total">
+                    <span>Subtotal</span>
+                    <span>$144.95</span>
                 </div>
-                <div className="side-card__item__body">
-                    <p className="side-card__item__body__desc">
-                        Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm - 50cm / 20in
-                    </p>
-                    <div className="side-card__item__body__price">
-                        <div className="side-card__item__body__price__offer">
-                            <span>$</span><span>19.95</span>
-                        </div>
-                        <div className="side-card__item__body__price__real">
-                            <span>$</span><span>29.95</span>
-                        </div>
-                    </div>
-                    <div className="side-card__item__body__counter">
-                        <button className="dec">-</button>
-                        <div className="side-card__item__body__counter__value"><span>0</span></div>
-                        <button className="inc">+</button>
-                    </div>
+                <div className="side-card__footer__buttons">
+                    <ul>
+                        <Link to="/cart"><li>View cart</li></Link>
+                        <Link to="/checkout"><li>Proceed to checkout</li></Link>
+                    </ul>
                 </div>
             </div>
         </div>
