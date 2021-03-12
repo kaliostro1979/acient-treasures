@@ -1,0 +1,82 @@
+/*---- Side shopping card ----*/
+
+@import "variables";
+
+
+.side-card{
+  position: fixed;
+  background-color: $white;
+  width: 360px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 12;
+  font-size: 13px;
+  &__header{
+    position: relative;
+    padding: 18px 20px;
+    background-color: rgba(32, 32, 32, 0.05);
+    color: #B4B4B4;
+    font-size: 13px;
+    text-transform: uppercase;
+    &__close{
+      position: absolute;
+      top: 13px;
+      right: 18px;
+      width: 24px;
+    }
+  }
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid rgba(32, 32, 32, 0.05);
+    &__pic{
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    &__body{
+      width: calc(100% - 84px);
+      &__price{
+        font-size: 16px;
+        display: flex;
+        margin: 15px 0;
+        &__offer{
+          color: $red;
+        }
+        &__real{
+          color: #B4B4B4;
+          text-decoration: line-through;
+          margin-left: 20px;
+        }
+      }
+      &__counter{
+        display: flex;
+        button{
+          padding: 9px 14px;
+          background: transparent;
+          border: 1px solid #D8D8D8;
+          cursor: pointer;
+          &:focus{
+            outline: none;
+          }
+          .dec{
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+          }
+        }
+        &__value{
+          width: 61px;
+          text-align: center;
+          padding: 9px 0;
+          border: 1px solid #D8D8D8;
+        }
+      }
+    }
+  }
+}

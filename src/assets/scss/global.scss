@@ -1,0 +1,32 @@
+/*---- Global ----*/
+
+@import "variables";
+@import "templates";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @extend %font_set;
+  color: $text_global_color;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
