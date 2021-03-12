@@ -1,10 +1,13 @@
 import React from 'react'
+import HomeText from "./HomeText";
+import Button from "../../components/Button";
 
 
 const Home = ()=>{
     return(
         <div className="home-main" style={{ backgroundImage: `url(/assets/images/home-bgr.png)` }}>
-            <h1>Home</h1>
+            <HomeText/>
+            <Button/>
         </div>
     )
 }

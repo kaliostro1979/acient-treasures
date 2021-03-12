@@ -1,0 +1,50 @@
+@import "../variables";
+
+/*---- Home Page ----*/
+
+.home-main {
+  position: relative;
+  height: calc(100vh - 82px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: rgb(19, 24, 36);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $home_bgr_grad
+
+  }
+}
+
+.home-text{
+  width: 45%;
+  position: relative;
+  z-index: 3;
+  font-family: 'Goudy Bookletter 1911', serif;
+  color: $white;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.banner-price{
+  display: flex;
+  justify-content: center;
+  font-family: $global_font_family;
+  font-size: 16px;
+  margin-top: 32px;
+  &__offer{
+    &__value{
+      margin-right: 20px;
+    }
+  }
+}
