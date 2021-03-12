@@ -1,11 +1,17 @@
 import React from 'react'
 import './assets/scss/style.scss'
+import Layout from "./components/Layout";
+import {BrowserRouter as Router} from "react-router-dom";
+import Navigation from "./components/Header/Navigation";
 
 
 function App() {
   return (
     <div className="App">
-      <h1>Store</h1>
+      <Router>
+          <Navigation/>
+          <Layout/>
+      </Router>
     </div>
   );
 }

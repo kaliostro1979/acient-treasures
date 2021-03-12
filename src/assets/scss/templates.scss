@@ -1,0 +1,12 @@
+@import "variables";
+
+%font_set{
+  font-family: $global_font_family;
+  font-weight: 700;
+}
+
+%flex_template{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
