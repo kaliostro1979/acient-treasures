@@ -6,6 +6,7 @@
 .navigation-main {
   @extend %flex_template;
   padding: 23px 111px;
+  background-color: $white;
 
   ul {
     display: flex;

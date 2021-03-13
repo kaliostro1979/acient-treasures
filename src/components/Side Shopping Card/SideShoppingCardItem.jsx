@@ -1,6 +1,22 @@
 import React from 'react'
+import {useDispatch, useSelector} from "react-redux";
+import {incrementItems} from "../../redux/actions/incrementItems";
+import {decrementItems} from "../../redux/actions/decrementItems";
 
 const SideShoppingCardItem = ()=>{
+
+    const counterValue = useSelector(state=>state.itemsCounter)
+    const dispatch = useDispatch()
+
+    const handleIncrement = ()=>{
+        dispatch(incrementItems())
+    }
+
+    const handleDecrement = ()=>{
+        dispatch(decrementItems())
+    }
+
+
     return(
         <div className="side-card__item">
             <div className="side-card__item__pic" style={{ backgroundImage: `url(/assets/images/item-images/item-1.jpg)` }}>
@@ -19,9 +35,9 @@ const SideShoppingCardItem = ()=>{
                     </div>
                 </div>
                 <div className="side-card__item__body__counter">
-                    <button className="dec">-</button>
-                    <div className="side-card__item__body__counter__value"><span>0</span></div>
-                    <button className="inc">+</button>
+                    <button className="dec" onClick={handleDecrement} disabled={counterValue.value === 0}>-</button>
+                    <input className="side-card__item__body__counter__value" value={counterValue.value}/>
+                    <button className="inc" onClick={handleIncrement}>+</button>
                 </div>
             </div>
         </div>
