@@ -2,14 +2,19 @@
 
 @import "variables";
 
+.side-card__main__open{
+  right: 0!important;
+}
+
 .side-card__main{
   position: fixed;
   background-color: $white;
   width: 360px;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: -360px;
   z-index: 12;
+  transition: right 300ms ease;
 }
 
 .side-card{
@@ -31,6 +36,7 @@
       top: 13px;
       right: 18px;
       width: 24px;
+      cursor: pointer;
     }
   }
   &__item{
