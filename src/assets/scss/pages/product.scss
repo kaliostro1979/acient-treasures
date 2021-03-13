@@ -1,38 +1,57 @@
 /*---- Product Page ----*/
 
 @import "../variables";
+@import "../templates";
 
-.product-main{
+.product-main {
   display: flex;
   padding: 20px 111px 111px 111px;
-  border: 1px solid rgba(32, 32, 32, 0.05);
+  border-top: 1px solid rgba(32, 32, 32, 0.05);
 }
 
-.product-gallery{
+.product-gallery-main {
+  margin-right: 20px;
   width: 659px;
 }
 
-.product-info{
+.product-gallery {
+  width: 100%;
+  height: 524px;
+  @extend %background;
+  &__thumbs-wrapper {
+    display: flex;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    &-item {
+      width: 64px;
+      height: 64px;
+      margin-right: 16px;
+      @extend %background;
+    }
+  }
+}
+
+.product-info {
   width: 465px;
 }
 
-.product-gallery{
-  margin-right: 20px;
-}
-
-.product-info{
-  &__title{
+.product-info {
+  &__title {
     font-family: "Goudy Bookletter 1911", sans-serif;
     font-size: 32px;
     font-weight: 400;
     margin-bottom: 37px;
   }
-  &__select{
+
+  &__select {
     position: relative;
-    p{
+
+    p {
       font-size: 21px;
     }
-    select{
+
+    select {
       width: 100%;
       padding: 16px 12px;
       font-size: 12px;
@@ -42,15 +61,18 @@
       margin: 8px 0 18px;
       appearance: none;
       -wbkit-appearance: none;
-      -moz-appearance:none;
-      &:focus{
+      -moz-appearance: none;
+
+      &:focus {
         outline: none;
       }
     }
-    &-wrapper{
+
+    &-wrapper {
       width: 293px;
       position: relative;
-      &:after{
+
+      &:after {
         content: '';
         position: absolute;
         width: 16px;
@@ -66,13 +88,15 @@
     }
 
   }
-  &__price{
-    span{
+
+  &__price {
+    span {
       font-size: 36px;
       color: $red;
       line-height: 42px;
     }
-    small{
+
+    small {
       display: inline-block;
       vertical-align: top;
       font-weight: 400;
@@ -80,31 +104,36 @@
       font-size: 13px;
     }
   }
-  &__control{
+
+  &__control {
     margin-top: 34px;
     margin-bottom: 46px;
     display: flex;
-    &__add-btn{
+
+    &__add-btn {
       margin-left: 15px;
-      padding: 14px 83px;
+      padding: 14px 80px;
       background-color: $red;
       border: none;
       border-radius: 4px;
       color: $white;
       font-size: 16px;
       cursor: pointer;
-      &:focus{
+
+      &:focus {
         outline: none;
       }
 
     }
   }
-  &__desc{
-    strong{
+
+  &__desc {
+    strong {
       display: inline-block;
       margin-bottom: 10px;
     }
-    p{
+
+    p {
       display: inline-block;
       margin-bottom: 10px;
       font-weight: 400;

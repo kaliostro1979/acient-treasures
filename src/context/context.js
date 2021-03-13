@@ -16,7 +16,7 @@ const ContextProvider =({children})=>{
         setCount(count - 1)
     }
 
-   /* const getItems = async ()=>{
+    const getItems = async ()=>{
         await fetch('./items.json',{
             headers : {
                 'Content-Type': 'application/json',
@@ -29,17 +29,16 @@ const ContextProvider =({children})=>{
             })
     }
 
-    console.log(items.length);
-
     useEffect(()=>{
         getItems()
-    },[])*/
+        localStorage.setItem('items', JSON.stringify(items))
+    },[])
 
 
 
 
     return(
-        <Context.Provider value={{ handleIncrement, handleDecrement, count }}>
+        <Context.Provider value={{ handleIncrement, handleDecrement, count, items }}>
             {children}
         </Context.Provider>
     )

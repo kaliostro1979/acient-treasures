@@ -7,7 +7,7 @@ const ItemCountLabel = ()=>{
 
     return(
         <div className="items-count">
-            <span>{items}</span>
+            <span>{items.length}</span>
         </div>
     )
 }

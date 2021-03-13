@@ -1,22 +1,80 @@
 [
   {
     "id": 1,
-    "name": "item-1"
+    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm - 50cm / 20in\n$19.95    $29.95",
+    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
+    "image" : "http://localhost:3000/assets/images/item-images/item-1.jpg",
+    "images": [
+      "http://localhost:3000/assets/images/item-images/item-1.jpg",
+      "http://localhost:3000/assets/images/item-images/item-2.jpg",
+      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+    ],
+    "price": 29.95,
+    "offerPrice": 19.95
   },
   {
     "id": 2,
-    "name": "item-1"
+    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm - 50cm / 20in\n$19.95    $29.95",
+    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
+    "image" : "http://localhost:3000/assets/images/item-images/item-2.jpg",
+    "images": [
+      "http://localhost:3000/assets/images/item-images/item-1.jpg",
+      "http://localhost:3000/assets/images/item-images/item-2.jpg",
+      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+    ],
+    "price": 27.50,
+    "offerPrice": 17.60
   },
   {
     "id": 3,
-    "name": "item-1"
+    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm - 50cm / 20in\n$19.95    $29.95",
+    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
+    "image" : "http://localhost:3000/assets/images/item-images/item-3.jpg",
+    "images": [
+      "http://localhost:3000/assets/images/item-images/item-1.jpg",
+      "http://localhost:3000/assets/images/item-images/item-2.jpg",
+      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+    ],
+    "price": 120.95,
+    "offerPrice": 85.95
   },
   {
     "id": 4,
-    "name": "item-1"
+    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm - 50cm / 20in\n$19.95    $29.95",
+    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
+    "image" : "http://localhost:3000/assets/images/item-images/item-3.jpg",
+    "images": [
+      "http://localhost:3000/assets/images/item-images/item-1.jpg",
+      "http://localhost:3000/assets/images/item-images/item-2.jpg",
+      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+    ],
+    "price": 250.95,
+    "offerPrice": 140.95
   },
   {
     "id": 5,
-    "name": "item-1"
+    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm - 50cm / 20in\n$19.95    $29.95",
+    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
+    "image" : "http://localhost:3000/assets/images/item-images/item-3.jpg",
+    "images": [
+      "http://localhost:3000/assets/images/item-images/item-1.jpg",
+      "http://localhost:3000/assets/images/item-images/item-2.jpg",
+      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+    ],
+    "price": 250.95,
+    "offerPrice": 140.95
+  },
+  {
+    "id": 6,
+    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm - 50cm / 20in\n$19.95    $29.95",
+    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
+    "image" : "http://localhost:3000/assets/images/item-images/item-3.jpg",
+    "images": [
+      "http://localhost:3000/assets/images/item-images/item-1.jpg",
+      "http://localhost:3000/assets/images/item-images/item-2.jpg",
+      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+    ],
+    "price": 15.95,
+    "offerPrice": 9.95
   }
 ]

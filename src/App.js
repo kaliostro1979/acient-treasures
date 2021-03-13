@@ -4,19 +4,23 @@ import Layout from "./components/Layout";
 import {BrowserRouter as Router} from "react-router-dom";
 import Navigation from "./components/Header/Navigation";
 import ContextProvider from "./context/context";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {closeSideShoppingCard} from "./redux/actions/closeSideShoppingCard";
 
 
 function App() {
 
     const cardState = useSelector(state=>state.sideShoppingCard)
 
+    const dispatch = useDispatch()
+
     return (
         <div className="App">
 
             <ContextProvider>
                 <Router>
-                    <div className="overlay" style={{ display: cardState.open ? 'block' : 'none' }}>
+                    <div className="overlay" style={{ display: cardState.open ? 'block' : 'none' }}
+                         onClick={()=>{dispatch(closeSideShoppingCard())}}>
 
                     </div>
                     <Navigation/>
