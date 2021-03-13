@@ -82,10 +82,11 @@
       &__counter{
         display: flex;
         button{
-          padding: 9px 14px;
+          padding: 9px 20px;
           background: transparent;
           border: 1px solid #D8D8D8;
           cursor: pointer;
+          font-size: 21px;
           &:focus{
             outline: none;
           }

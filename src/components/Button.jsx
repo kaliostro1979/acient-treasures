@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const Button = ()=>{
     return(
-        <Link to="/store" className="button">
+        <Link to="/product" className="button">
             Start Shopping
         </Link>
     )

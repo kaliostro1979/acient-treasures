@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {Context} from "../../../context/context";
 
 const ItemCountLabel = ()=>{
+
+    const { items } = useContext(Context)
+
     return(
         <div className="items-count">
-            <span>8</span>
+            <span>{items}</span>
         </div>
     )
 }

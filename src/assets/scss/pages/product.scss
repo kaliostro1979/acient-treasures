@@ -1,0 +1,113 @@
+/*---- Product Page ----*/
+
+@import "../variables";
+
+.product-main{
+  display: flex;
+  padding: 20px 111px 111px 111px;
+  border: 1px solid rgba(32, 32, 32, 0.05);
+}
+
+.product-gallery{
+  width: 659px;
+}
+
+.product-info{
+  width: 465px;
+}
+
+.product-gallery{
+  margin-right: 20px;
+}
+
+.product-info{
+  &__title{
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 37px;
+  }
+  &__select{
+    position: relative;
+    p{
+      font-size: 21px;
+    }
+    select{
+      width: 100%;
+      padding: 16px 12px;
+      font-size: 12px;
+      border-color: #D8D8D8;
+      border-radius: 4px;
+      box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.13);
+      margin: 8px 0 18px;
+      appearance: none;
+      -wbkit-appearance: none;
+      -moz-appearance:none;
+      &:focus{
+        outline: none;
+      }
+    }
+    &-wrapper{
+      width: 293px;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-image: url("http://localhost:3000/assets/images/icons/chevrone.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 24px;
+        right: 17px;
+        pointer-events: none;
+      }
+    }
+
+  }
+  &__price{
+    span{
+      font-size: 36px;
+      color: $red;
+      line-height: 42px;
+    }
+    small{
+      display: inline-block;
+      vertical-align: top;
+      font-weight: 400;
+      padding: 9px;
+      font-size: 13px;
+    }
+  }
+  &__control{
+    margin-top: 34px;
+    margin-bottom: 46px;
+    display: flex;
+    &__add-btn{
+      margin-left: 15px;
+      padding: 14px 83px;
+      background-color: $red;
+      border: none;
+      border-radius: 4px;
+      color: $white;
+      font-size: 16px;
+      cursor: pointer;
+      &:focus{
+        outline: none;
+      }
+
+    }
+  }
+  &__desc{
+    strong{
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    p{
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+  }
+}
