@@ -9,15 +9,15 @@ import {closeSideShoppingCard} from "./redux/actions/sideShoppingCardStatus";
 
 
 
-function App() {
+function App(props) {
 
     const cardState = useSelector(state=>state.sideShoppingCard)
-
     const dispatch = useDispatch()
+
+
 
     return (
         <div className="App">
-
             <ContextProvider>
                 <Router>
                     <div className="overlay" style={{ display: cardState.open ? 'block' : 'none' }}

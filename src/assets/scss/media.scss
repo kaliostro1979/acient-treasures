@@ -44,6 +44,10 @@
   .product-info__control__add-btn{
     padding: 14px 55px;
   }
+
+  .store a{
+    width: 50%;
+  }
 }
 
 @media (max-width: 991px){
@@ -132,6 +136,10 @@
     &-wrapper{
       width: 100%;
     }
+  }
+
+  .store a{
+    width: 100%;
   }
 }
 
