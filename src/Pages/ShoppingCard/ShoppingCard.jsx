@@ -1,6 +1,7 @@
 import React from 'react'
 import SideShoppingCard from "../../components/Side Shopping Card/SideShopingCard";
 import {Link} from "react-router-dom";
+import {productsUrl} from "../../URL";
 
 
 const ShoppingCard = () => {
@@ -8,7 +9,7 @@ const ShoppingCard = () => {
         <div className="shoppingCard">
             <SideShoppingCard/>
             <div className="continue-shopping">
-                <Link to="/products">
+                <Link to={productsUrl}>
                     Continue Shopping
                 </Link>
             </div>

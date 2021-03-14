@@ -5,6 +5,7 @@ import ItemCounter from "../ItemCounter";
 import {closeSideShoppingCard} from "../../redux/actions/sideShoppingCardStatus";
 import {hideRemoveIcon, showRemoveIcon} from "../../redux/actions/removeIconAction";
 import {fetchCardItems} from "../../redux/actions/getCardAllItems";
+import {cardUrl, checkoutUrl} from "../../URL";
 
 
 const SideShoppingCard = () => {
@@ -149,10 +150,10 @@ const SideShoppingCard = () => {
                 </div>
                 <div className="side-card__footer__buttons">
                     <ul>
-                        <Link to="/cart">
+                        <Link to={cardUrl}>
                             <li>View cart</li>
                         </Link>
-                        <Link to="/checkout">
+                        <Link to={checkoutUrl}>
                             <li>Proceed to checkout</li>
                         </Link>
                     </ul>
