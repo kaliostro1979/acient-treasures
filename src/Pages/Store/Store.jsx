@@ -1,14 +1,20 @@
-import React, {useContext} from 'react'
-import {Context} from "../../context/context";
+import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from "react-redux";
 import {getItem} from "../../redux/actions/getCurrentItem";
 import {Link} from "react-router-dom";
+import {fetchAllItems} from "../../redux/actions/getAllItems";
 
 const Store = () => {
 
-    const {allItems} = useContext(Context)
+
     const current = useSelector(state => state.currentItem)
+    const allItems = useSelector(state => state.allItems)
     const dispatch = useDispatch()
+
+    useEffect(()=>{
+        dispatch(fetchAllItems())
+    }, [dispatch])
+
 
     return (
         <div className="store">

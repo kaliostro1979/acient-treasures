@@ -9,7 +9,6 @@ const NavigationMenu = () => {
 
     const dispatch = useDispatch()
 
-
     return (
         <div className="navigation-menu_main">
             <ul className="navigation-items__list">

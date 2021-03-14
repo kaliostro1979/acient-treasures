@@ -14,7 +14,7 @@ const ItemCountLabel = ()=>{
 
     return(
         <div className="items-count">
-            <span>{cardItems.length}</span>
+            <span>{cardItems === null ? 0 : cardItems.length}</span>
         </div>
     )
 }

@@ -81,7 +81,6 @@ const Product = ({history}) => {
                 <div className="product-info__desc">
                     <strong>Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!</strong>
                     <p>{currentItem.description}</p>
-
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import ItemCounter from "../ItemCounter";
 import {closeSideShoppingCard} from "../../redux/actions/sideShoppingCardStatus";
 import {hideRemoveIcon, showRemoveIcon} from "../../redux/actions/removeIconAction";
+import {fetchCardItems} from "../../redux/actions/getCardAllItems";
 
 
 const SideShoppingCard = () => {
@@ -24,6 +25,7 @@ const SideShoppingCard = () => {
 
 
     useEffect(() => {
+        dispatch(fetchCardItems())
         setCounterStart(false)
         if (allItemsFromLocalStorage !== null) {
             const allItemsA = JSON.parse(allItemsFromLocalStorage)
