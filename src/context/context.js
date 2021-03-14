@@ -1,4 +1,6 @@
 import React, {createContext, useEffect, useState} from 'react'
+import {fetchAllItems} from "../redux/actions/getAllItems";
+import {useDispatch, useSelector} from "react-redux";
 
 
 export const Context = createContext()
@@ -7,6 +9,8 @@ const ContextProvider =({children})=>{
 
     const [count, setCount] = useState(0)
     const [items, setItems] = useState([])
+    const dispatch = useDispatch()
+    const allItems = useSelector((state=>state.allItems))
 
     const handleIncrement = ()=>{
         setCount(count + 1)
@@ -16,29 +20,16 @@ const ContextProvider =({children})=>{
         setCount(count - 1)
     }
 
-    const getItems = async ()=>{
-        await fetch('./items.json',{
-            headers : {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-        })
-            .then(res=>res.json())
-            .then(data=>{
-                setItems(data)
-            })
-    }
 
     useEffect(()=>{
-        getItems()
-        localStorage.setItem('items', JSON.stringify(items))
+        dispatch(fetchAllItems())
     },[])
 
 
 
 
     return(
-        <Context.Provider value={{ handleIncrement, handleDecrement, count, items }}>
+        <Context.Provider value={{ handleIncrement, handleDecrement, count, allItems }}>
             {children}
         </Context.Provider>
     )

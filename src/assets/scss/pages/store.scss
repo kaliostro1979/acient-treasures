@@ -1,0 +1,17 @@
+.store{
+  display: flex;
+  padding: 111px;
+}
+
+.storeItem{
+  flex-basis: 30%;
+  flex-grow: 1;
+  border: solid 1px #000000;
+  text-align: center;
+  padding: 30px;
+  cursor: pointer;
+  &:hover{
+    color: white;
+    background-color: #cc0000;
+  }
+}

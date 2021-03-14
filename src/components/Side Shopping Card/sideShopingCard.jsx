@@ -9,8 +9,8 @@ import {Context} from "../../context/context";
 
 
 const SideShoppingCard = () => {
-
-    const { items } = useContext(Context)
+    
+    const [allItems, setAllItems] = useState([])
     const [prices, setPrices] = useState([])
 
     const cardState = useSelector(state=>state.sideShoppingCard)
@@ -19,8 +19,13 @@ const SideShoppingCard = () => {
 
     const price = []
 
+    const allItemsFromLocalStorage = localStorage.getItem('cardItems')
+
+
+
+
     const totalSum = ()=>{
-        items.map((item)=>{
+        allItems.map((item)=>{
             price.push(item.offerPrice)
         })
         setPrices(price)
@@ -30,8 +35,12 @@ const SideShoppingCard = () => {
 
 
     useMemo(()=>{
+        if(allItemsFromLocalStorage !== null){
+            const allItemsA = JSON.parse(allItemsFromLocalStorage)
+            setAllItems(allItemsA)
+        }
         totalSum()
-    },[items])
+    },[allItemsFromLocalStorage])
 
     const handleCardState = ()=>{
         dispatch(closeSideShoppingCard())
@@ -46,18 +55,19 @@ const SideShoppingCard = () => {
     }
 
 
+
     return (
         <div className="side-card-overlay">
             <div className={cardState.open ? "side-card__main__open side-card__main" : "side-card__main"}>
                 <div className="side-card__header">
-                    <p>Cart (<span>{items.length}</span> items)</p>
+                    <p>Cart (<span>{allItems.length}</span> items)</p>
                     <div className="side-card__header__close" onClick={handleCardState}>
                         <img src="/assets/images/icons/close-dark.png" alt=""/>
                     </div>
                 </div>
                 <div className="side-card">
                     {
-                        items.map((item)=>{
+                        allItems.map((item)=>{
                             return(
                                 <div className="side-card__item" key={item.id}>
 

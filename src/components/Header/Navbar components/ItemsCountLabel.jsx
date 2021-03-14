@@ -3,11 +3,11 @@ import {Context} from "../../../context/context";
 
 const ItemCountLabel = ()=>{
 
-    const { items } = useContext(Context)
+    const { allItems } = useContext(Context)
 
     return(
         <div className="items-count">
-            <span>{items.length}</span>
+            <span>{allItems.length}</span>
         </div>
     )
 }

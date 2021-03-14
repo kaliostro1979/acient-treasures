@@ -1,23 +1,30 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, { useEffect, useState} from 'react'
 import ItemCounter from "../../components/Counter/ItemCounter";
-import {Context} from "../../context/context";
+import {useSelector} from "react-redux";
 
 const Product = ()=>{
 
-    const {items} = useContext(Context)
-    const [imageThumb, setImageThumb] = useState([])
-    const [selectedImage, setSelectedImage] = useState('')
+    const current = useSelector(state => state.currentItem)
+    const [selectedImage, setSelectedImage] = useState(current.image)
+    const itemFromLocalStorage = localStorage.getItem('currentItem')
+    const currentItem = JSON.parse(itemFromLocalStorage)
 
-    const thumbs = ()=> {
-        items.map((i)=>{
-            setImageThumb(i.images)
-            setSelectedImage(i.image)
-        })
-    }
+
+
 
     useEffect(()=>{
-        thumbs()
-    },[items])
+        setSelectedImage(currentItem.image)
+    },[])
+
+
+    const handleAddToCard = ()=>{
+        let cardItems =[]
+        if(localStorage.getItem('cardItems')){
+            cardItems = JSON.parse(localStorage.getItem('cardItems'));
+        }
+        cardItems.push(currentItem);
+        localStorage.setItem('cardItems', JSON.stringify(cardItems))
+    }
 
 
 
@@ -30,7 +37,7 @@ const Product = ()=>{
                 </div>
                 <div className="product-gallery__thumbs-wrapper">
                     {
-                        imageThumb.map((item, i)=>{
+                        currentItem.images.map((item, i)=>{
                             return(
                                 <div
                                     className="product-gallery__thumbs-wrapper-item"
@@ -47,7 +54,7 @@ const Product = ()=>{
             </div>
             <div className="product-info">
                 <div className="product-info__title">
-                    <span>Handmade Stainless Steel Kings Chain Viking Geri And Freki Mjolnir Necklace</span>
+                    <span>{currentItem.title}</span>
                 </div>
                 <div className="product-control__wrapper">
                     <div className="product-info__select">
@@ -61,19 +68,17 @@ const Product = ()=>{
                         </div>
                     </div>
                     <div className="product-info__price">
-                        <span>$19.95</span>
+                        <span>${currentItem.offerPrice}</span>
                         <small>Tax included</small>
                     </div>
                     <div className="product-info__control">
                         <ItemCounter/>
-                        <button className="product-info__control__add-btn">Add to Card</button>
+                        <button className="product-info__control__add-btn" onClick={handleAddToCard}>Add to Card</button>
                     </div>
                 </div>
                 <div className="product-info__desc">
                     <strong>Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!</strong>
-                    <p>The Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.
-                    </p>
-                    <p>The hand made chain connects together with a lobster clamp.</p>
+                    <p>{currentItem.description}</p>
 
                 </div>
             </div>
