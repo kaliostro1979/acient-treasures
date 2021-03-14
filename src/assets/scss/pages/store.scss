@@ -5,11 +5,19 @@
 
 .store{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 111px;
+  a{
+    width: 25%;
+    display: block;
+  }
 }
 
+
+
 .storeItem{
-  flex-basis: 30%;
+  width: 100%;
   text-align: center;
   padding: 30px;
   cursor: pointer;
