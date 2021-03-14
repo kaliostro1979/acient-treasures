@@ -16,6 +16,7 @@ const NavigationMenu = () => {
     return (
         <div className="navigation-menu_main">
             <ul className="navigation-items__list">
+                <li><Link to="/products">Store</Link></li>
                 <li><Link to="/vikings">Vikings</Link></li>
                 <li><Link to="/ancient-egypt">Ancient Egypt</Link></li>
                 <li><Link to="/celtics">Celtics</Link></li>

@@ -1,9 +1,18 @@
-import React, {useContext} from 'react'
-import {Context} from "../../../context/context";
+import React, {useEffect, useState} from 'react'
 
 const ItemCountLabel = ()=>{
 
-    const { allItems } = useContext(Context)
+    const [allItems, setAllItems] = useState([])
+
+    const allItemsFromLocalStorage = localStorage.getItem('cardItems')
+
+
+    useEffect(()=>{
+        if(allItemsFromLocalStorage !== null){
+            const allItemsA = JSON.parse(allItemsFromLocalStorage)
+            setAllItems(allItemsA)
+        }
+    },[allItemsFromLocalStorage])
 
     return(
         <div className="items-count">

@@ -1,8 +1,9 @@
-import React, { useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import ItemCounter from "../../components/Counter/ItemCounter";
 import {useSelector} from "react-redux";
+import {Link} from "react-router-dom";
 
-const Product = ()=>{
+const Product = () => {
 
     const current = useSelector(state => state.currentItem)
     const [selectedImage, setSelectedImage] = useState(current.image)
@@ -10,16 +11,14 @@ const Product = ()=>{
     const currentItem = JSON.parse(itemFromLocalStorage)
 
 
-
-
-    useEffect(()=>{
+    useEffect(() => {
         setSelectedImage(currentItem.image)
-    },[])
+    }, [])
 
 
-    const handleAddToCard = ()=>{
-        let cardItems =[]
-        if(localStorage.getItem('cardItems')){
+    const handleAddToCard = () => {
+        let cardItems = []
+        if (localStorage.getItem('cardItems')) {
             cardItems = JSON.parse(localStorage.getItem('cardItems'));
         }
         cardItems.push(currentItem);
@@ -27,23 +26,23 @@ const Product = ()=>{
     }
 
 
-
-
     return (
         <div className="product-main">
             <div className="product-gallery-main">
-                <div className="product-gallery" style={{ backgroundImage: `url(${selectedImage})` }}>
+                <div className="product-gallery" style={{backgroundImage: `url(${selectedImage})`}}>
 
                 </div>
                 <div className="product-gallery__thumbs-wrapper">
                     {
-                        currentItem.images.map((item, i)=>{
-                            return(
+                        currentItem.images.map((item, i) => {
+                            return (
                                 <div
                                     className="product-gallery__thumbs-wrapper-item"
-                                    style={{ backgroundImage: `url(${item})` }}
+                                    style={{backgroundImage: `url(${item})`}}
                                     key={Math.random()}
-                                    onClick={()=>{setSelectedImage(item)}}
+                                    onClick={() => {
+                                        setSelectedImage(item)
+                                    }}
                                 >
 
                                 </div>
@@ -73,7 +72,9 @@ const Product = ()=>{
                     </div>
                     <div className="product-info__control">
                         <ItemCounter/>
-                        <button className="product-info__control__add-btn" onClick={handleAddToCard}>Add to Card</button>
+                        <button className="product-info__control__add-btn" onClick={handleAddToCard}>Add to
+                            Card
+                        </button>
                     </div>
                 </div>
                 <div className="product-info__desc">

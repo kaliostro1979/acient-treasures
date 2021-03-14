@@ -22,7 +22,15 @@ const Store = () => {
                                 onClick={(e) => {
                                     dispatch(getItem(item.id))
                                 }}>
-                                <p>{item.id}</p>
+                                <div className="storeItem-image" style={{ backgroundImage: `url(${item.image})`}}>
+
+                                </div>
+                                <div className="storeItem-title">
+                                    <p>{item.title}</p>
+                                </div>
+                                <div className="storeItem-price">
+                                    <p>${item.offerPrice}</p>
+                                </div>
                             </div>
                         </Link>
                     )
