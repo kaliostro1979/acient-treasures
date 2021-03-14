@@ -5,8 +5,8 @@ import {useDispatch, useSelector} from "react-redux";
 
 export const Context = createContext()
 
-const ContextProvider =(props)=>{
-    const [children] = props
+const ContextProvider =({children})=>{
+
     const [count, setCount] = useState(0)
     const [items, setItems] = useState([])
     const dispatch = useDispatch()

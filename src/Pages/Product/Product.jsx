@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import ItemCounter from "../../components/Counter/ItemCounter";
 import {useSelector} from "react-redux";
-import {Link} from "react-router-dom";
 
-const Product = () => {
+
+const Product = ({history}) => {
 
     const current = useSelector(state => state.currentItem)
     const [selectedImage, setSelectedImage] = useState(current.image)
@@ -16,14 +16,16 @@ const Product = () => {
     }, [])
 
 
-    const handleAddToCard = () => {
+    const handleAddToCard = (id) => {
         let cardItems = []
         if (localStorage.getItem('cardItems')) {
             cardItems = JSON.parse(localStorage.getItem('cardItems'));
         }
         cardItems.push(currentItem);
         localStorage.setItem('cardItems', JSON.stringify(cardItems))
+        history.push('/shopping-card')
     }
+
 
 
     return (
@@ -44,7 +46,6 @@ const Product = () => {
                                         setSelectedImage(item)
                                     }}
                                 >
-
                                 </div>
                             )
                         })
@@ -72,7 +73,7 @@ const Product = () => {
                     </div>
                     <div className="product-info__control">
                         <ItemCounter/>
-                        <button className="product-info__control__add-btn" onClick={handleAddToCard}>Add to
+                        <button className="product-info__control__add-btn" onClick={()=>{handleAddToCard(currentItem.id)}}>Add to
                             Card
                         </button>
                     </div>

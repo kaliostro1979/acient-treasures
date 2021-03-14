@@ -1,0 +1,31 @@
+.shoppingCard{
+  .side-card__main{
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    left: 0;
+    .side-card{
+      padding: 0;
+      height: auto;
+    }
+    .side-card__header{
+      display: none;
+    }
+    .side-card__footer{
+      display: none;
+    }
+  }
+  .continue-shopping{
+    a{
+      padding: 0 80px;
+      background-color: #cc0000;
+      text-align: center;
+      color: white;
+      display: inline-block;
+      line-height: 3;
+      border-radius: 6px;
+      margin-left: 39px;
+      margin-bottom: 30px;
+    }
+  }
+}

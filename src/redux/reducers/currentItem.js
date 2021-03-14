@@ -7,7 +7,9 @@ const initialState = {
     image : "",
     images: [],
     price: 0,
-    offerPrice: 0
+    offerPrice: 0,
+    calculatedPrice: 0,
+    quantity: 1
 }
 
 export const currentItemReducer = (state = initialState, action)=>{
