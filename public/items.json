@@ -10,7 +10,9 @@
       "http://localhost:3000/assets/images/item-images/item-3.jpg"
     ],
     "price": 29.95,
-    "offerPrice": 19.95
+    "calculatedPrice": 19.95,
+    "offerPrice": 19.95,
+    "quantity": "1"
   },
   {
     "id": 2,
@@ -23,7 +25,9 @@
       "http://localhost:3000/assets/images/item-images/item-3.jpg"
     ],
     "price": 27.50,
-    "offerPrice": 17.60
+    "offerPrice": 17.60,
+    "calculatedPrice": 17.60,
+    "quantity": "1"
   },
   {
     "id": 3,
@@ -36,7 +40,9 @@
       "http://localhost:3000/assets/images/item-images/item-3.jpg"
     ],
     "price": 120.95,
-    "offerPrice": 85.95
+    "offerPrice": 85.95,
+    "calculatedPrice": 85.95,
+    "quantity": "1"
   },
   {
     "id": 4,
@@ -49,7 +55,9 @@
       "http://localhost:3000/assets/images/item-images/item-3.jpg"
     ],
     "price": 250.95,
-    "offerPrice": 140.95
+    "offerPrice": 140.95,
+    "calculatedPrice": 140.95,
+    "quantity": "1"
   },
   {
     "id": 5,
@@ -62,7 +70,9 @@
       "http://localhost:3000/assets/images/item-images/item-3.jpg"
     ],
     "price": 250.95,
-    "offerPrice": 140.95
+    "offerPrice": 140.95,
+    "calculatedPrice": 140.95,
+    "quantity": "1"
   },
   {
     "id": 6,
@@ -75,6 +85,8 @@
       "http://localhost:3000/assets/images/item-images/item-3.jpg"
     ],
     "price": 15.95,
-    "offerPrice": 9.95
+    "offerPrice": 9.95,
+    "calculatedPrice": 9.95,
+    "quantity": "1"
   }
 ]

@@ -1,8 +1,8 @@
 import {GET_ALL_ITEMS} from "../types";
 
-const initialState = []
 
-export const allItemsReducer = (state = initialState,action)=>{
+
+export const allItemsReducer = (state = [],action)=>{
     switch (action.type){
         case GET_ALL_ITEMS:
             return state = action.payload

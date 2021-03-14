@@ -3,24 +3,32 @@ import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {closeSideShoppingCard} from "../../redux/actions/closeSideShoppingCard";
 
-import {incrementItems} from "../../redux/actions/incrementItems";
-import {decrementItems} from "../../redux/actions/decrementItems";
 
 
 const SideShoppingCard = () => {
 
     const [allItems, setAllItems] = useState([])
     const [prices, setPrices] = useState([])
-    const [counterValue, setCounterValue] = useState(1)
+    const [counterStart, setCounterStart] = useState(false)
 
 
     const cardState = useSelector(state => state.sideShoppingCard)
-    //const counterValue = useSelector(state => state.itemsCounter)
     const dispatch = useDispatch()
 
     const price = []
 
     const allItemsFromLocalStorage = localStorage.getItem('cardItems')
+
+
+    useEffect(() => {
+        setCounterStart(false)
+        if (allItemsFromLocalStorage !== null) {
+            const allItemsA = JSON.parse(allItemsFromLocalStorage)
+            setAllItems(allItemsA)
+            totalSum()
+        }
+
+    }, [allItemsFromLocalStorage, counterStart])
 
     const totalSum = () => {
         allItems.map((item) => {
@@ -28,16 +36,6 @@ const SideShoppingCard = () => {
         })
         setPrices(price)
     }
-
-    useEffect(() => {
-
-        if (allItemsFromLocalStorage !== null) {
-            const allItemsA = JSON.parse(allItemsFromLocalStorage)
-            setAllItems(allItemsA)
-            totalSum()
-        }
-
-    }, [allItemsFromLocalStorage, counterValue])
 
     const sum = prices.reduce(function (acc, val) {
         return acc + val;
@@ -50,16 +48,31 @@ const SideShoppingCard = () => {
         dispatch(closeSideShoppingCard())
     }
 
-    const handleIncrement = (e) => {
-        totalSum()
-        setCounterValue(++itemCounter.current.value)
+    const handleDecrement = (id) => {
+        setCounterStart(true)
+        let storageCardItems = localStorage.getItem('cardItems')
+        let cardItemsArray = JSON.parse(storageCardItems)
+        cardItemsArray.filter((cardItem)=>{
+            if(cardItem.id === id){
+                --cardItem.quantity
+                cardItem.calculatedPrice = Math.round(cardItem.offerPrice * cardItem.quantity).toFixed(2)
+            }
+        })
+        localStorage.setItem('cardItems', JSON.stringify(cardItemsArray))
     }
 
-    const handleDecrement = () => {
-        totalSum()
-        setCounterValue(--itemCounter.current.value)
+    const handleIncrement = (id)=>{
+        setCounterStart(true)
+        let storageCardItems = localStorage.getItem('cardItems')
+        let cardItemsArray = JSON.parse(storageCardItems)
+        cardItemsArray.filter((cardItem)=>{
+            if(cardItem.id === id){
+                ++cardItem.quantity
+                return cardItem.calculatedPrice = Math.round(cardItem.offerPrice * cardItem.quantity).toFixed(2)
+            }
+        })
+        localStorage.setItem('cardItems', JSON.stringify(cardItemsArray))
     }
-
 
     return (
         <div className="side-card-overlay">
@@ -88,17 +101,23 @@ const SideShoppingCard = () => {
                                         <div className="side-card__item__body__price">
                                             <div className="side-card__item__body__price__offer">
                                                 <span>$</span>
-                                                <span>{item.offerPrice}</span>
+                                                <span>{item.calculatedPrice}</span>
                                             </div>
                                             <div className="side-card__item__body__price__real">
                                                 <span>$</span><span>{item.price}</span>
                                             </div>
                                         </div>
                                         <div className="side-card__item__body__counter" >
-                                            <button className="dec" onClick={handleDecrement} disabled={counterValue === 1}>-</button>
-                                            <input className="side-card__item__body__counter__value"
-                                                   value={counterValue} disabled ref={itemCounter} id={item.id}/>
-                                            <button className="inc" onClick={handleIncrement}>+</button>
+                                            <button className="dec" onClick={()=>{handleDecrement(item.id)}} disabled={item.quantity === 1}>-</button>
+                                            <input
+                                                className="side-card__item__body__counter__value"
+                                                value={item.quantity}
+                                                disabled ref={itemCounter}
+                                                id={item.id}
+                                            />
+                                            <button
+                                                className="inc"
+                                                onClick={()=>{handleIncrement(item.id)}}>+</button>
                                         </div>
                                     </div>
                                 </div>
@@ -111,7 +130,7 @@ const SideShoppingCard = () => {
                 <div className="side-card__footer">
                     <div className="side-card__footer__total">
                         <span>Subtotal</span>
-                        {/*<span>${sum.toFixed(1)}</span>*/}
+                        <span>${sum.toFixed(1)}</span>
                     </div>
                     <div className="side-card__footer__buttons">
                         <ul>
