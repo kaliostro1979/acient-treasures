@@ -3,7 +3,9 @@ import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {closeSideShoppingCard} from "../../redux/actions/closeSideShoppingCard";
 import SideShoppingCardItem from "./SideShoppingCardItem";
-
+import {showRemoveIcon} from "../../redux/actions/showRemoveIcon";
+import {hideRemoveIcon} from "../../redux/actions/hideRemoveIcon";
+import ItemCounter from "../ItemCounter";
 
 
 const SideShoppingCard = () => {
@@ -14,7 +16,9 @@ const SideShoppingCard = () => {
 
 
     const cardState = useSelector(state => state.sideShoppingCard)
+    const removeBtnStatus = useSelector(state=>state.removeIcon)
     const dispatch = useDispatch()
+
 
     const price = []
 
@@ -43,7 +47,6 @@ const SideShoppingCard = () => {
     }, 0)
 
 
-
     const handleCardState = () => {
         dispatch(closeSideShoppingCard())
     }
@@ -52,8 +55,8 @@ const SideShoppingCard = () => {
         setCounterStart(true)
         let storageCardItems = localStorage.getItem('cardItems')
         let cardItemsArray = JSON.parse(storageCardItems)
-        cardItemsArray.filter((cardItem)=>{
-            if(cardItem.id === id){
+        cardItemsArray.filter((cardItem) => {
+            if (cardItem.id === id) {
                 --cardItem.quantity
                 cardItem.calculatedPrice = Math.round(cardItem.offerPrice * cardItem.quantity).toFixed(2)
             }
@@ -61,12 +64,24 @@ const SideShoppingCard = () => {
         localStorage.setItem('cardItems', JSON.stringify(cardItemsArray))
     }
 
-    const handleIncrement = (id)=>{
+    const handleRemoveItem = (id)=>{
         setCounterStart(true)
         let storageCardItems = localStorage.getItem('cardItems')
         let cardItemsArray = JSON.parse(storageCardItems)
-        cardItemsArray.filter((cardItem)=>{
-            if(cardItem.id === id){
+        const index = cardItemsArray.map((item)=>{
+            return item.id
+        }).indexOf(id)
+        cardItemsArray.splice(index, 1)
+        localStorage.setItem('cardItems', JSON.stringify(cardItemsArray))
+    }
+
+
+    const handleIncrement = (id) => {
+        setCounterStart(true)
+        let storageCardItems = localStorage.getItem('cardItems')
+        let cardItemsArray = JSON.parse(storageCardItems)
+        cardItemsArray.filter((cardItem) => {
+            if (cardItem.id === id) {
                 ++cardItem.quantity
                 return cardItem.calculatedPrice = Math.round(cardItem.offerPrice * cardItem.quantity).toFixed(2)
             }
@@ -86,13 +101,41 @@ const SideShoppingCard = () => {
                 {
                     allItems.map((item) => {
                         return (
-                            <SideShoppingCardItem
-                                item={item}
-                                handleDecrement={handleDecrement}
-                                handleIncrement={handleIncrement}
-                                handleCardState={handleCardState}
-                                key={Math.random()}
-                            />
+                            <div className="side-card__item"
+                                 key={Math.random()}
+                                 onMouseOver={() => {
+                                     dispatch(showRemoveIcon())
+                                 }}
+                                 onMouseLeave={() => {
+                                     dispatch(hideRemoveIcon())
+                                 }}>
+                                <div className={removeBtnStatus ? "remove-icon remove-icon-show" : "remove-icon"}
+                                     onClick={() => {
+                                         handleRemoveItem(item.id)
+                                     }}>
+                                    <img src="/assets/images/icons/remove.png" alt=""/>
+                                </div>
+                                <div className="side-card__item__pic"
+                                     style={{backgroundImage: `url(${item.image})`}}>
+                                </div>
+                                <div className="side-card__item__body">
+                                    <Link className="side-card__item__body__desc" to={"/product/" + item.id}
+                                          onClick={handleCardState}>
+                                        {item.title}
+                                    </Link>
+                                    <div className="side-card__item__body__price">
+                                        <div className="side-card__item__body__price__offer">
+                                            <span>$</span>
+                                            <span>{item.calculatedPrice}</span>
+                                        </div>
+                                        <div className="side-card__item__body__price__real">
+                                            <span>$</span><span>{item.price}</span>
+                                        </div>
+                                    </div>
+                                    <ItemCounter handleDecrement={handleDecrement} item={item}
+                                                 handleIncrement={handleIncrement}/>
+                                </div>
+                            </div>
                         )
                     })
                 }
