@@ -1,22 +1,20 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
+import {useDispatch, useSelector} from "react-redux";
+import {fetchCardItems} from "../../../redux/actions/getCardAllItems";
 
 const ItemCountLabel = ()=>{
 
-    const [allItems, setAllItems] = useState([])
-
-    const allItemsFromLocalStorage = localStorage.getItem('cardItems')
+    const cardItems = useSelector(state=>state.cardAllItems)
+    const dispatch = useDispatch()
 
 
     useEffect(()=>{
-        if(allItemsFromLocalStorage !== null){
-            const allItemsA = JSON.parse(allItemsFromLocalStorage)
-            setAllItems(allItemsA)
-        }
-    },[allItemsFromLocalStorage])
+        dispatch(fetchCardItems())
+    },[dispatch])
 
     return(
         <div className="items-count">
-            <span>{allItems.length}</span>
+            <span>{cardItems.length}</span>
         </div>
     )
 }

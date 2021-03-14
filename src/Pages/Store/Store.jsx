@@ -1,7 +1,7 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import {Context} from "../../context/context";
 import {useDispatch, useSelector} from "react-redux";
-import {getCurrentItem, getItem, getItems} from "../../redux/actions/getCurrentItem";
+import {getItem} from "../../redux/actions/getCurrentItem";
 import {Link} from "react-router-dom";
 
 const Store = () => {

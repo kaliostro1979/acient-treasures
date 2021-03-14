@@ -5,6 +5,7 @@ import {currentItemReducer} from "./reducers/currentItem";
 import {allItemsReducer} from "./reducers/allItems";
 import {counterReducer} from "./reducers/counter";
 import {removeIconReducer} from "./reducers/removeIcon";
+import {cardAllItemsReducer} from "./reducers/cardAllItems";
 
 export const rootReducer = combineReducers({
     mobileMenu: mobileMenu,
@@ -12,5 +13,6 @@ export const rootReducer = combineReducers({
     currentItem: currentItemReducer,
     allItems: allItemsReducer,
     counter: counterReducer,
-    removeIcon: removeIconReducer
+    removeIcon: removeIconReducer,
+    cardAllItems: cardAllItemsReducer
 })

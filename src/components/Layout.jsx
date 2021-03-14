@@ -6,6 +6,7 @@ import SideShoppingCard from "./Side Shopping Card/SideShopingCard";
 import Product from "../Pages/Product/Product";
 import Store from "../Pages/Store/Store";
 import ShoppingCard from "../Pages/ShoppingCard/ShoppingCard";
+import {cardUrl, homeUrl, productsUrl} from "../URL";
 
 
 
@@ -13,10 +14,10 @@ import ShoppingCard from "../Pages/ShoppingCard/ShoppingCard";
 const Layout = ()=>{
     return (
         <>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/products" component={Store}/>
-            <Route exact path="/products/:id" component={Product}/>
-            <Route exact path="/shopping-card" component={ShoppingCard}/>
+            <Route exact path={homeUrl} component={Home}/>
+            <Route exact path={productsUrl} component={Store}/>
+            <Route exact path={productsUrl + '/:id'} component={Product}/>
+            <Route exact path={cardUrl} component={ShoppingCard}/>
             <MobileMenu/>
             <SideShoppingCard/>
         </>

@@ -13,7 +13,7 @@ const Product = ({history}) => {
 
     useEffect(() => {
         setSelectedImage(currentItem.image)
-    }, [])
+    }, [currentItem.image])
 
 
     const handleAddToCard = (id) => {

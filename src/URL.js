@@ -1,0 +1,7 @@
+export const homeUrl = "/"
+export const productsUrl = "/products"
+export const vikingsUrl = "/vikings"
+export const ancientEgyptUrl = "/ancient-egypt"
+export const celticsUrl = "/celtics"
+export const saleUrl = "/sale"
+export const cardUrl = "/shopping-card"

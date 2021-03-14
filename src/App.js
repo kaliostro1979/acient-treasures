@@ -5,7 +5,8 @@ import {BrowserRouter as Router} from "react-router-dom";
 import Navigation from "./components/Header/Navigation";
 import ContextProvider from "./context/context";
 import {useDispatch, useSelector} from "react-redux";
-import {closeSideShoppingCard} from "./redux/actions/closeSideShoppingCard";
+import {closeSideShoppingCard} from "./redux/actions/sideShoppingCardStatus";
+
 
 
 function App() {

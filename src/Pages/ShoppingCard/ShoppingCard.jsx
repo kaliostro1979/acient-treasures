@@ -9,7 +9,6 @@ const ShoppingCard = () => {
             <SideShoppingCard/>
             <div className="continue-shopping">
                 <Link to="/products">
-
                     Continue Shopping
                 </Link>
             </div>

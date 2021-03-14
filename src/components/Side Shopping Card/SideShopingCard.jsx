@@ -1,11 +1,9 @@
-import React, {useEffect, useMemo, useRef, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {closeSideShoppingCard} from "../../redux/actions/closeSideShoppingCard";
-import SideShoppingCardItem from "./SideShoppingCardItem";
-import {showRemoveIcon} from "../../redux/actions/showRemoveIcon";
-import {hideRemoveIcon} from "../../redux/actions/hideRemoveIcon";
 import ItemCounter from "../ItemCounter";
+import {closeSideShoppingCard} from "../../redux/actions/sideShoppingCardStatus";
+import {hideRemoveIcon, showRemoveIcon} from "../../redux/actions/removeIconAction";
 
 
 const SideShoppingCard = () => {
@@ -37,7 +35,7 @@ const SideShoppingCard = () => {
 
     const totalSum = () => {
         allItems.map((item) => {
-            price.push(+item.calculatedPrice)
+           return price.push(+item.calculatedPrice)
         })
         setPrices(price)
     }
@@ -58,7 +56,7 @@ const SideShoppingCard = () => {
         cardItemsArray.filter((cardItem) => {
             if (cardItem.id === id) {
                 --cardItem.quantity
-                cardItem.calculatedPrice = Math.round(cardItem.offerPrice * cardItem.quantity).toFixed(2)
+                 cardItem.calculatedPrice = Math.round(cardItem.offerPrice * cardItem.quantity).toFixed(2)
             }
         })
         localStorage.setItem('cardItems', JSON.stringify(cardItemsArray))

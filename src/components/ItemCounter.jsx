@@ -7,7 +7,6 @@ const ItemCounter = ({handleDecrement, item, handleIncrement})=>{
             <input
                 className="side-card__item__body__counter__value"
                 value={item.quantity}
-                id={item.id}
                 disabled
             />
             <button

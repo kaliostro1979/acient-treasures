@@ -1,20 +1,14 @@
 import React from 'react'
-import {useDispatch, useSelector} from "react-redux";
-import {closeMobileMenu} from "../../../redux/actions/closeMobileMenu";
-import {openMobileMenu} from "../../../redux/actions/openMobileMenu";
+import {useDispatch} from "react-redux";
+import {openMobileMenu} from "../../../redux/actions/mobileMenu";
 
 
 
 const BurgerButton = ()=>{
-
-    const menuState = useSelector(state=>state.mobileMenu)
     const dispatch = useDispatch()
-
     const handleMenuState = ()=>{
         dispatch(openMobileMenu())
     }
-
-
 
     return(
         <div className="burger-button" onClick={handleMenuState}>
