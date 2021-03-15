@@ -10,8 +10,6 @@ export const fetchCardItems = ()=>{
 }
 
 
-
-
 export const getCardAllItems = (cardItemsArray)=>{
     return ({
         type: GET_CARD_ALL_ITEMS,

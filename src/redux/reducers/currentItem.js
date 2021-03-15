@@ -1,21 +1,13 @@
-import {GET_CURRENT_ITEM} from "../types";
+import {GET_CURRENT_ITEM, SET_CURRENT_ITEM} from "../types";
 
-const initialState = {
-    id: 1,
-    title: "",
-    description: "",
-    image : "",
-    images: [],
-    price: 0,
-    offerPrice: 0,
-    calculatedPrice: 0,
-    quantity: 1
-}
+const initialState = ''
 
 export const currentItemReducer = (state = initialState, action)=>{
     switch (action.type){
+        case SET_CURRENT_ITEM:
+            return state = action.payload
         case GET_CURRENT_ITEM:
-            return action.payload
+            return state = action.payload
         default:
             return state
     }
