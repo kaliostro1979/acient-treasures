@@ -1,16 +1,16 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import ItemCounter from "../ItemCounter";
+
 import {closeSideShoppingCard} from "../../redux/actions/sideShoppingCardStatus";
 import {hideRemoveIcon, showRemoveIcon} from "../../redux/actions/removeIconAction";
 import {fetchCardItems} from "../../redux/actions/getCardAllItems";
 import {cardUrl, checkoutUrl} from "../../URL";
 import {handleRemoveItem} from "../../redux/actions/cardItemsControl";
+import CardItemsCounter from "../Counter/CardItemsCounter";
 
 
 const SideShoppingCard = () => {
-    const [counterStart, setCounterStart] = useState(false)
     const cardState = useSelector(state => state.sideShoppingCard)
     const cardItems = useSelector(state => state.cardAllItems)
     const removeBtnStatus = useSelector(state=>state.removeIcon)
@@ -19,8 +19,7 @@ const SideShoppingCard = () => {
 
     useEffect(() => {
         dispatch(fetchCardItems())
-        setCounterStart(false)
-    }, [dispatch, counterStart])
+    }, [dispatch])
 
 
 
@@ -30,32 +29,7 @@ const SideShoppingCard = () => {
     const sum = totalSum && totalSum.reduce(function (acc, val) {
         return acc + val;
     }, 0)
-    
 
-    const handleDecrement = (id) => {
-        setCounterStart(true)
-        cardItems.filter((cardItem) => {
-            if (cardItem.id === id) {
-                --cardItem.quantity
-                 return cardItem.calculatedPrice = Math.round(cardItem.offerPrice * cardItem.quantity).toFixed(2)
-            }
-        })
-        localStorage.setItem('cardItems', JSON.stringify(cardItems))
-    }
-
-
-    const handleIncrement = (id) => {
-        setCounterStart(true)
-        let storageCardItems = localStorage.getItem('cardItems')
-        let cardItemsArray = JSON.parse(storageCardItems)
-        cardItemsArray.filter((cardItem) => {
-            if (cardItem.id === id) {
-                ++cardItem.quantity
-                return cardItem.calculatedPrice = Math.round(cardItem.offerPrice * cardItem.quantity).toFixed(2)
-            }
-        })
-        localStorage.setItem('cardItems', JSON.stringify(cardItemsArray))
-    }
 
     if(cardItems){
         return (
@@ -79,9 +53,7 @@ const SideShoppingCard = () => {
                                          dispatch(hideRemoveIcon())
                                      }}>
                                     <div className={removeBtnStatus ? "remove-icon remove-icon-show" : "remove-icon"}
-                                         onClick={() => {
-                                             dispatch(handleRemoveItem(item.id))
-                                         }}>
+                                         onClick={() => {dispatch(handleRemoveItem(item.id))}}>
                                         <img src="/assets/images/icons/remove.png" alt=""/>
                                     </div>
                                     <div className="side-card__item__pic"
@@ -101,8 +73,9 @@ const SideShoppingCard = () => {
                                                 <span>$</span><span>{item.price}</span>
                                             </div>
                                         </div>
-                                        <ItemCounter handleDecrement={handleDecrement} item={item}
-                                                     handleIncrement={handleIncrement}/>
+
+                                        <CardItemsCounter id={item.id} item={item}/>
+
                                     </div>
                                 </div>
                             )

@@ -65,7 +65,9 @@ const Product = () => {
                             <small>Tax included</small>
                         </div>
                         <div className="product-info__control">
-                            <ItemCounter/>
+
+                            <ItemCounter current={current}/>
+
                             <button className="product-info__control__add-btn" onClick={() => {
                                 dispatch(handleAddToCard())
                             }}>Add to
