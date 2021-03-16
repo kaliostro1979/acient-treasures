@@ -1,17 +1,18 @@
 import {ADD_TO_CARD} from "../types";
 import {fetchCardItems} from "./getCardAllItems";
 
-
-
+let cardItems = []
 export const handleAddToCard = ()=>{
-    let cardItems = []
+
     return (dispatch)=>{
         const currentStr = localStorage.getItem('currentItem')
         const current = JSON.parse(currentStr)
-        cardItems = [...cardItems, current];
+        console.log(current);
+        cardItems.push(current)
         localStorage.setItem('cardItems', JSON.stringify(cardItems))
         dispatch(cardItemsControl(cardItems))
         dispatch(fetchCardItems())
+        console.log(cardItems);
     }
 }
 
@@ -36,6 +37,7 @@ export const handleRemoveItem = (id)=>{
         cardItemsArray.length === 0 && localStorage.removeItem('cardItems')
         dispatch(removeFromCard(cardItemsArray))
         dispatch(fetchCardItems())
+        cardItems = []
     }
 }
 

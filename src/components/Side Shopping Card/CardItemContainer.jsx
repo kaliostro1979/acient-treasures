@@ -2,7 +2,7 @@ import React from 'react'
 import CardItem from "./CardItem";
 
 const CardItemContainer = (props)=>{
-
+    console.log(props.cardItems);
     return(
         <div className="side-card">
             {

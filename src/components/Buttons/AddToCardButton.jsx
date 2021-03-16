@@ -7,7 +7,6 @@ const AddToCardButton = ()=>{
 
     const dispatch = useDispatch()
 
-
     return(
         <button className="product-info__control__add-btn" onClick={() => {
             dispatch(handleAddToCard())
