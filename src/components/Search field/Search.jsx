@@ -20,7 +20,7 @@ const Search = (props)=>{
         return i.title.match(input)
     })
 
-
+    
     return(
         <div className={ search ? "search-main search-main-open" : "search-main"}>
             <input type="text" placeholder="Enter product name" onChange={handleChange}/>

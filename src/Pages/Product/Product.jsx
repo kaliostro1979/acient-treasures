@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react'
+import React, {useMemo} from 'react'
 import ItemCounter from "../../components/Counter/ItemCounter";
 import {useDispatch, useSelector} from "react-redux";
 import {getItem} from "../../redux/actions/currentItemActions";

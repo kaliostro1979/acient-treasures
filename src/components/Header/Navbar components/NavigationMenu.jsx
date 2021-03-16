@@ -4,7 +4,7 @@ import ItemCountLabel from "./ItemsCountLabel";
 import {useDispatch, useSelector} from "react-redux";
 import {ancientEgyptUrl, celticsUrl, productsUrl, saleUrl, vikingsUrl} from "../../../URL";
 import {openShoppingCardStatus} from "../../../redux/actions/sideShoppingCardStatus";
-import {clearSearchField, closeSearchField, openSearchField} from "../../../redux/actions/searchFieldAction";
+import {clearSearchField, openSearchField} from "../../../redux/actions/searchFieldAction";
 
 const NavigationMenu = () => {
     const search = useSelector(state => state.searchField)

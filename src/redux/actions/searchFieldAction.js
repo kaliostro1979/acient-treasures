@@ -1,5 +1,5 @@
 import {CLOSE_SEARCH_FIELD, OPEN_SEARCH_FIELD} from "../types";
-import {filterAllItems, filterAllItemsAction} from "./getAllItems";
+import {filterAllItems} from "./getAllItems";
 
 
 export const clearSearchField = ()=>{

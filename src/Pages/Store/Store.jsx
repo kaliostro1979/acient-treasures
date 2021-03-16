@@ -1,8 +1,7 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from "react-redux";
-import {fetchAllItems, filterAllItems} from "../../redux/actions/getAllItems";
+import {filterAllItems} from "../../redux/actions/getAllItems";
 import StoreItem from "./StoreItem";
-import Search from "../../components/Search field/Search";
 
 const Store = () => {
     const allItems = useSelector(state => state.allItems)
