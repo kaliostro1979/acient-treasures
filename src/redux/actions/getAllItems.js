@@ -14,7 +14,7 @@ export const filterAllItems = (input)=>{
         const allItems = await fetch('http://localhost:3000/items.json')
             .then(res=>res.json())
         const newArray = allItems.filter((i)=>{
-            return i.title.match(input)
+            return i.title.toLowerCase().match(input)
         })
         dispatch(filterAllItemsAction(newArray))
     }

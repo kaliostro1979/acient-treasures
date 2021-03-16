@@ -1,13 +1,16 @@
 [
   {
     "id": 1,
-    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm (Product-1)",
-    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
-    "image" : "http://localhost:3000/assets/images/item-images/item-1.jpg",
+    "title": "STAINLESS STEEL WOLF HEAD CHAIN WITH MJOLNIR",
+    "description": "Ancient Treasures Customer\n\nVikings used necklaces with animals or beasts biting onto a ring where pendants were hung. This variant consists of a King Chain ending in the heads of Geri and Freki, the wolves of Odin, that bite onto a ring with a large Mjölnir pendant.\n\nThis Chain is 100% handmade from Stainless Steel, which results in a piece of fantastic jewelry that will never rust. The process of crafting it by hand is very time-consuming, since each small link is added one by one to the chain. The chain comes with a lobster clasp that keeps this massive piece secured around your neck, as well as a pendant ring that can be opened and closed easily.\n\n100% Heavy Stainless Steel\nHandcrafted, forged link by link & bound by a lobster clasp\nChoose between Chain Length of 20/24/28 Inches (50/60/70 cm)",
+    "image" : "http://localhost:3000/assets/images/item-images/steel_wolf/1.webp",
     "images": [
-      "http://localhost:3000/assets/images/item-images/item-1.jpg",
-      "http://localhost:3000/assets/images/item-images/item-2.jpg",
-      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+      "http://localhost:3000/assets/images/item-images/steel_wolf/1.webp",
+      "http://localhost:3000/assets/images/item-images/steel_wolf/2.webp",
+      "http://localhost:3000/assets/images/item-images/steel_wolf/3.webp",
+      "http://localhost:3000/assets/images/item-images/steel_wolf/4.webp",
+      "http://localhost:3000/assets/images/item-images/steel_wolf/5.webp",
+      "http://localhost:3000/assets/images/item-images/steel_wolf/6.webp"
     ],
     "price": 29.95,
     "calculatedPrice": 19.95,
@@ -16,13 +19,16 @@
   },
   {
     "id": 2,
-    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm (Product-2)",
+    "title": "MASSIVE STAINLESS STEEL WOLF KING CHAIN WITH MJOLNIR\n",
     "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
-    "image" : "http://localhost:3000/assets/images/item-images/item-2.jpg",
+    "image" : "http://localhost:3000/assets/images/item-images/steel_wolf_gold/1.jpg",
     "images": [
-      "http://localhost:3000/assets/images/item-images/item-1.jpg",
-      "http://localhost:3000/assets/images/item-images/item-2.jpg",
-      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+      "http://localhost:3000/assets/images/item-images/steel_wolf_gold/1.jpg",
+      "http://localhost:3000/assets/images/item-images/steel_wolf_gold/2.jpg",
+      "http://localhost:3000/assets/images/item-images/steel_wolf_gold/3.jpg",
+      "http://localhost:3000/assets/images/item-images/steel_wolf_gold/4.jpg",
+      "http://localhost:3000/assets/images/item-images/steel_wolf_gold/5.jpg",
+      "http://localhost:3000/assets/images/item-images/steel_wolf_gold/6.jpg"
     ],
     "price": 27.50,
     "offerPrice": 17.60,
@@ -31,13 +37,16 @@
   },
   {
     "id": 3,
-    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm (Product-3)",
+    "title": "STAINLESS STEEL WOLF HEAD BLACK KING CHAIN WITH GOLD & SILVER MJOLNIR",
     "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
-    "image" : "http://localhost:3000/assets/images/item-images/item-3.jpg",
+    "image" : "http://localhost:3000/assets/images/item-images/steel_wolf_black/1.jpg",
     "images": [
-      "http://localhost:3000/assets/images/item-images/item-1.jpg",
-      "http://localhost:3000/assets/images/item-images/item-2.jpg",
-      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+      "http://localhost:3000/assets/images/item-images/steel_wolf_black/1.jpg",
+      "http://localhost:3000/assets/images/item-images/steel_wolf_black/2.jpg",
+      "http://localhost:3000/assets/images/item-images/steel_wolf_black/3.jpg",
+      "http://localhost:3000/assets/images/item-images/steel_wolf_black/4.jpg",
+      "http://localhost:3000/assets/images/item-images/steel_wolf_black/5.jpg",
+      "http://localhost:3000/assets/images/item-images/steel_wolf_black/6.jpg"
     ],
     "price": 120.95,
     "offerPrice": 85.95,
@@ -46,13 +55,12 @@
   },
   {
     "id": 4,
-    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm (Product-4)",
+    "title": "VIKING YGGDRASIL TREE OF LIFE KNOTWORK CELTIC RING STAINLESS STEEL",
     "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
-    "image" : "http://localhost:3000/assets/images/item-images/item-3.jpg",
+    "image" : "http://localhost:3000/assets/images/item-images/viking_yggdrasil/1.webp",
     "images": [
-      "http://localhost:3000/assets/images/item-images/item-1.jpg",
-      "http://localhost:3000/assets/images/item-images/item-2.jpg",
-      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+      "http://localhost:3000/assets/images/item-images/viking_yggdrasil/1.webp",
+      "http://localhost:3000/assets/images/item-images/viking_yggdrasil/2.webp"
     ],
     "price": 250.95,
     "offerPrice": 140.95,
@@ -61,13 +69,16 @@
   },
   {
     "id": 5,
-    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm (Product-5)",
+    "title": "VIKING NORDIC GERI & FREKI STAINLESS STEEL RING",
     "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
-    "image" : "http://localhost:3000/assets/images/item-images/item-3.jpg",
+    "image" : "http://localhost:3000/assets/images/item-images/viking_nordic/1.webp",
     "images": [
-      "http://localhost:3000/assets/images/item-images/item-1.jpg",
-      "http://localhost:3000/assets/images/item-images/item-2.jpg",
-      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+      "http://localhost:3000/assets/images/item-images/viking_nordic/1.webp",
+      "http://localhost:3000/assets/images/item-images/viking_nordic/2.webp",
+      "http://localhost:3000/assets/images/item-images/viking_nordic/3.webp",
+      "http://localhost:3000/assets/images/item-images/viking_nordic/4.webp",
+      "http://localhost:3000/assets/images/item-images/viking_nordic/5.webp",
+      "http://localhost:3000/assets/images/item-images/viking_nordic/6.webp"
     ],
     "price": 250.95,
     "offerPrice": 140.95,
@@ -76,13 +87,35 @@
   },
   {
     "id": 6,
-    "title": "Handmade Stainless Steel Massive Wolf Chain with Odin’s Protection Charm (Product-6)",
+    "title": "VIKING NORDIC GIANT DRAGON NIDHOGG GLOWING RING",
     "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
-    "image" : "http://localhost:3000/assets/images/item-images/item-3.jpg",
+    "image" : "http://localhost:3000/assets/images/item-images/giant_dragon/1.jpg",
     "images": [
-      "http://localhost:3000/assets/images/item-images/item-1.jpg",
-      "http://localhost:3000/assets/images/item-images/item-2.jpg",
-      "http://localhost:3000/assets/images/item-images/item-3.jpg"
+      "http://localhost:3000/assets/images/item-images/giant_dragon/1.jpg",
+      "http://localhost:3000/assets/images/item-images/giant_dragon/2.jpg",
+      "http://localhost:3000/assets/images/item-images/giant_dragon/3.jpg",
+      "http://localhost:3000/assets/images/item-images/giant_dragon/4.jpg",
+      "http://localhost:3000/assets/images/item-images/giant_dragon/5.jpg",
+      "http://localhost:3000/assets/images/item-images/giant_dragon/6.jpg"
+    ],
+    "price": 15.95,
+    "offerPrice": 9.95,
+    "calculatedPrice": 9.95,
+    "quantity": "1"
+  },
+  {
+    "id": 7,
+    "title": "VIKING NORDIC RUNES SOLID STAINLESS STEEL RING",
+    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
+    "image" : "http://localhost:3000/assets/images/item-images/runes_solid/1.jpg",
+    "images": [
+      "http://localhost:3000/assets/images/item-images/runes_solid/1.jpg",
+      "http://localhost:3000/assets/images/item-images/runes_solid/2.jpg",
+      "http://localhost:3000/assets/images/item-images/runes_solid/3.jpg",
+      "http://localhost:3000/assets/images/item-images/runes_solid/4.jpg",
+      "http://localhost:3000/assets/images/item-images/runes_solid/5.jpg",
+      "http://localhost:3000/assets/images/item-images/runes_solid/6.jpg",
+      "http://localhost:3000/assets/images/item-images/runes_solid/7.jpg"
     ],
     "price": 15.95,
     "offerPrice": 9.95,

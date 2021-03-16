@@ -4,7 +4,7 @@ import ItemCountLabel from "./ItemsCountLabel";
 import {useDispatch, useSelector} from "react-redux";
 import {ancientEgyptUrl, celticsUrl, productsUrl, saleUrl, vikingsUrl} from "../../../URL";
 import {openShoppingCardStatus} from "../../../redux/actions/sideShoppingCardStatus";
-import {closeSearchField, openSearchField} from "../../../redux/actions/searchFieldAction";
+import {clearSearchField, closeSearchField, openSearchField} from "../../../redux/actions/searchFieldAction";
 
 const NavigationMenu = () => {
     const search = useSelector(state => state.searchField)
@@ -36,7 +36,7 @@ const NavigationMenu = () => {
                         <div
                             className="search-icon_close"
                             style={{display: search ? "block" : "none"}}
-                            onClick={()=>{dispatch(closeSearchField())}}
+                            onClick={()=>{dispatch(clearSearchField())}}
                         >
                         <img
                             className="search-icon"

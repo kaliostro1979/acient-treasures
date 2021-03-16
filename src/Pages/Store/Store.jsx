@@ -9,13 +9,12 @@ const Store = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        /*dispatch(fetchAllItems())*/
         dispatch(filterAllItems())
     }, [dispatch])
 
     return (
         <div className="store-wrapper">
-            <Search allItems={allItems}/>
+
             <div className="store">
                 {
                     allItems.map((item) => {
