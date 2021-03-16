@@ -2,10 +2,10 @@ import React from 'react'
 import {setItem} from "../../redux/actions/currentItemActions";
 import {Link} from "react-router-dom";
 import AddToCardButton from "../../components/Buttons/AddToCardButton";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 export const StoreItem = (props)=>{
-
+    const allItems = useSelector(state => state.allItems )
     const dispatch = useDispatch()
 
     return(
@@ -13,7 +13,7 @@ export const StoreItem = (props)=>{
             className="storeItem"
             id={props.item.id}
             onClick={(e) => {
-                dispatch(setItem(props.item.id))
+                dispatch(setItem(props.item.id, allItems))
             }}>
             <div className="storeItem-image" style={{ backgroundImage: `url(${props.item.image})`}}>
 
