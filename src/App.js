@@ -1,6 +1,6 @@
 import React from 'react'
 import './assets/scss/style.scss'
-import Layout from "./components/Layout";
+import Layout from "./components/Layout/Layout";
 import {BrowserRouter as Router} from "react-router-dom";
 import Navigation from "./components/Header/Navigation";
 import {useDispatch, useSelector} from "react-redux";
