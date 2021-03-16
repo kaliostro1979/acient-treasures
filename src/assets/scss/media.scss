@@ -1,3 +1,14 @@
+@media (max-width: 1550px){
+  .store-wrapper{
+    padding: 30px;
+    .store{
+      .storeItem{
+        width: 31%;
+      }
+    }
+  }
+}
+
 @media (max-width: 1200px){
 
   .logo{
@@ -44,11 +55,12 @@
   .product-info__control__add-btn{
     padding: 14px 55px;
   }
-
-  .store{
+  .store-wrapper{
     padding: 30px;
-    .storeItem{
-      width: 46%;
+    .store{
+      .storeItem{
+        width: 46%;
+      }
     }
   }
 }
@@ -141,9 +153,11 @@
     }
   }
 
-  .store{
-    .storeItem{
-      width: 100%;
+  .store-wrapper{
+    .store{
+      .storeItem{
+        width: 100%;
+      }
     }
   }
 }
