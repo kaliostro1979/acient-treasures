@@ -8,7 +8,7 @@ const CardItemContainer = (props)=>{
             {
                 props.cardItems.map((item) => {
                     return (
-                        <CardItem item={item}/>
+                        <CardItem item={item} key={Math.random()}/>
                     )
                 })
             }
