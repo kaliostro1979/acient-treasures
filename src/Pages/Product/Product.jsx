@@ -1,8 +1,8 @@
 import React, {useMemo, useState} from 'react'
 import ItemCounter from "../../components/Counter/ItemCounter";
 import {useDispatch, useSelector} from "react-redux";
-import {handleAddToCard} from "../../redux/actions/cardItemsControl";
 import {getItem} from "../../redux/actions/currentItemActions";
+import AddToCardButton from "../../components/Buttons/AddToCardButton";
 
 
 const Product = () => {
@@ -67,12 +67,8 @@ const Product = () => {
                         <div className="product-info__control">
 
                             <ItemCounter current={current}/>
+                            <AddToCardButton/>
 
-                            <button className="product-info__control__add-btn" onClick={() => {
-                                dispatch(handleAddToCard())
-                            }}>Add to
-                                Card
-                            </button>
                         </div>
                     </div>
                     <div className="product-info__desc">

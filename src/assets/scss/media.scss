@@ -45,8 +45,11 @@
     padding: 14px 55px;
   }
 
-  .store a{
-    width: 50%;
+  .store{
+    padding: 30px;
+    .storeItem{
+      width: 46%;
+    }
   }
 }
 
@@ -138,8 +141,10 @@
     }
   }
 
-  .store a{
-    width: 100%;
+  .store{
+    .storeItem{
+      width: 100%;
+    }
   }
 }
 

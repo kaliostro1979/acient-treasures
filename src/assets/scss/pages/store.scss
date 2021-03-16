@@ -8,19 +8,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 111px;
-  a{
-    width: 25%;
-    display: block;
-  }
 }
 
 
 
 .storeItem{
-  width: 100%;
+  width: 23%;
+  display: block;
   text-align: center;
   padding: 30px;
-  cursor: pointer;
+  border: solid 1px #ededed;
+  margin: 10px;
   &:hover{
     background-color: #ededed;
   }
@@ -28,5 +26,12 @@
     width: 100%;
     height: 283px;
     @extend %background
+  }
+  &-title{
+    margin: 20px 0;
+  }
+  &-price{
+    margin-bottom: 25px;
+    font-size: 32px;
   }
 }

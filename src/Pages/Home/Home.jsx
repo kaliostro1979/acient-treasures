@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeText from "./HomeText";
-import Button from "../../components/Button";
+import Button from "../../components/Buttons/Button";
 
 
 const Home = ()=>{
