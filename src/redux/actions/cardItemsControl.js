@@ -2,8 +2,9 @@ import {ADD_TO_CARD} from "../types";
 import {fetchCardItems} from "./getCardAllItems";
 
 
-let cardItems = []
+
 export const handleAddToCard = ()=>{
+    let cardItems = []
     return (dispatch)=>{
         const currentStr = localStorage.getItem('currentItem')
         const current = JSON.parse(currentStr)
@@ -32,6 +33,7 @@ export const handleRemoveItem = (id)=>{
         }).indexOf(id)
         cardItemsArray.splice(index, 1)
         localStorage.setItem('cardItems', JSON.stringify(cardItemsArray))
+        cardItemsArray.length === 0 && localStorage.removeItem('cardItems')
         dispatch(removeFromCard(cardItemsArray))
         dispatch(fetchCardItems())
     }
