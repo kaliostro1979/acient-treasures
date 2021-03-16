@@ -3,9 +3,6 @@ import CardItem from "./CardItem";
 
 const CardItemContainer = (props)=>{
 
-
-
-
     return(
         <div className="side-card">
             {

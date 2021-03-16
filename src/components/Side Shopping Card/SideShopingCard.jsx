@@ -11,7 +11,6 @@ const SideShoppingCard = () => {
     const cardItems = useSelector(state => state.cardAllItems)
     const dispatch = useDispatch()
 
-
     useEffect(() => {
         dispatch(fetchCardItems())
     }, [dispatch])
