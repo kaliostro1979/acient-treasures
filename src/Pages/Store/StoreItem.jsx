@@ -2,12 +2,11 @@ import React from 'react'
 import {setItem} from "../../redux/actions/currentItemActions";
 import {Link} from "react-router-dom";
 import AddToCardButton from "../../components/Buttons/AddToCardButton";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 export const StoreItem = (props)=>{
 
     const dispatch = useDispatch()
-
 
     return(
         <div

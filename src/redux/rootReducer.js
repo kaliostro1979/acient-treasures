@@ -6,6 +6,7 @@ import {allItemsReducer} from "./reducers/allItems";
 import {removeIconReducer} from "./reducers/removeIcon";
 import {cardAllItemsReducer} from "./reducers/cardAllItems";
 import {addToShoppingCardReducer} from "./reducers/cardItemsControlReducer";
+import {searchFieldReducer} from "./reducers/searchField";
 
 export const rootReducer = combineReducers({
     mobileMenu: mobileMenu,
@@ -14,5 +15,6 @@ export const rootReducer = combineReducers({
     allItems: allItemsReducer,
     removeIcon: removeIconReducer,
     cardAllItems: cardAllItemsReducer,
-    addToCard: addToShoppingCardReducer
+    addToCard: addToShoppingCardReducer,
+    searchField: searchFieldReducer
 })

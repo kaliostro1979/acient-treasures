@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from "react-redux";
-import {fetchAllItems} from "../../redux/actions/getAllItems";
+import {fetchAllItems, filterAllItems} from "../../redux/actions/getAllItems";
 import StoreItem from "./StoreItem";
 import Search from "../../components/Search field/Search";
 
@@ -9,12 +9,13 @@ const Store = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(fetchAllItems())
+        /*dispatch(fetchAllItems())*/
+        dispatch(filterAllItems())
     }, [dispatch])
 
     return (
-        <>
-            <Search/>
+        <div className="store-wrapper">
+            <Search allItems={allItems}/>
             <div className="store">
                 {
                     allItems.map((item) => {
@@ -24,7 +25,7 @@ const Store = () => {
                     })
                 }
             </div>
-        </>
+        </div>
     )
 }
 

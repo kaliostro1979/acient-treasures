@@ -1,12 +1,13 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import ItemCountLabel from "./ItemsCountLabel";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {ancientEgyptUrl, celticsUrl, productsUrl, saleUrl, vikingsUrl} from "../../../URL";
 import {openShoppingCardStatus} from "../../../redux/actions/sideShoppingCardStatus";
+import {closeSearchField, openSearchField} from "../../../redux/actions/searchFieldAction";
 
 const NavigationMenu = () => {
-
+    const search = useSelector(state => state.searchField)
     const dispatch = useDispatch()
 
     return (
@@ -21,7 +22,27 @@ const NavigationMenu = () => {
             <div className="navigation-icons">
                 <ul>
                     <li>
-                        <img src="/assets/images/icons/search-icon.png" alt=""/>
+                        <div
+                            className="search-icon_open"
+                            style={{display: search ? "none" : "block"}}
+                            onClick={()=>{dispatch(openSearchField())}}
+                        >
+                        <img
+                            className="search-icon"
+                            src="/assets/images/icons/search-icon.png"
+                            alt=""
+                        />
+                        </div>
+                        <div
+                            className="search-icon_close"
+                            style={{display: search ? "block" : "none"}}
+                            onClick={()=>{dispatch(closeSearchField())}}
+                        >
+                        <img
+                            className="search-icon"
+                            src="/assets/images/icons/close-dark.png"
+                            alt=""/>
+                        </div>
                     </li>
                     <li onClick={()=>{dispatch(openShoppingCardStatus())}}>
                         <ItemCountLabel/>

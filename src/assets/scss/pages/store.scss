@@ -2,15 +2,14 @@
 
 @import "../templates";
 
-
-.store{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.store-wrapper{
   padding: 30px 111px;
+  .store{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
-
-
 
 .storeItem{
   width: 23%;
@@ -34,4 +33,25 @@
     margin-bottom: 25px;
     font-size: 32px;
   }
+}
+
+.search-main{
+  width: 100%;
+  margin-bottom: 20px;
+  display: none;
+  input{
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 8px 0;
+    border-bottom: 1px solid #ededed;
+    font-size: 18px;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+.search-main-open{
+  display: block;
 }
