@@ -10,7 +10,7 @@ const ItemCounter = (props) => {
 
     return (
         <div className="side-card__item__body__counter">
-            <button className="dec" onClick={()=>{dispatch(handleDecrement(props.current))}} disabled = {props.current.quantity === 1}>-</button>
+            <button className="dec" onClick={()=>{dispatch(handleDecrement(props.current))}} disabled = {props.current.quantity < 2}>-</button>
             <input className="side-card__item__body__counter__value" value={props.current.quantity} disabled/>
             <button className="inc" onClick={()=>{dispatch(handleIncrement(props.current))}}>+</button>
         </div>

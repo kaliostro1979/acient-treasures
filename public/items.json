@@ -15,7 +15,8 @@
     "price": 29.95,
     "calculatedPrice": 19.95,
     "offerPrice": 19.95,
-    "quantity": "1"
+    "quantity": "1",
+    "category": "chains"
   },
   {
     "id": 2,
@@ -33,7 +34,8 @@
     "price": 27.50,
     "offerPrice": 17.60,
     "calculatedPrice": 17.60,
-    "quantity": "1"
+    "quantity": "1",
+    "category": "chains"
   },
   {
     "id": 3,
@@ -51,7 +53,8 @@
     "price": 120.95,
     "offerPrice": 85.95,
     "calculatedPrice": 85.95,
-    "quantity": "1"
+    "quantity": "1",
+    "category": "chains"
   },
   {
     "id": 4,
@@ -65,7 +68,8 @@
     "price": 250.95,
     "offerPrice": 140.95,
     "calculatedPrice": 140.95,
-    "quantity": "1"
+    "quantity": "1",
+    "category": "rings"
   },
   {
     "id": 5,
@@ -83,7 +87,8 @@
     "price": 250.95,
     "offerPrice": 140.95,
     "calculatedPrice": 140.95,
-    "quantity": "1"
+    "quantity": "1",
+    "category": "rings"
   },
   {
     "id": 6,
@@ -101,7 +106,8 @@
     "price": 15.95,
     "offerPrice": 9.95,
     "calculatedPrice": 9.95,
-    "quantity": "1"
+    "quantity": "1",
+    "category": "rings"
   },
   {
     "id": 7,
@@ -120,6 +126,7 @@
     "price": 15.95,
     "offerPrice": 9.95,
     "calculatedPrice": 9.95,
-    "quantity": "1"
+    "quantity": "1",
+    "category": "rings"
   }
 ]
