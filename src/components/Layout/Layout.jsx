@@ -11,20 +11,20 @@ import SearchPage from "../../Pages/Search/SearchPage";
 import {Container} from 'react-bootstrap'
 
 
-
-
-const Layout = ()=>{
+const Layout = () => {
 
     return (
-        <Container fluid={true}>
+        <>
             <Route activeClassName="active-link" exact path={homeUrl} component={Home}/>
-            <Route activeClassName="active-link" exact path={productsUrl} component={Store}/>
-            <Route activeClassName="active-link" exact path={productsUrl + '/:id'} component={Product}/>
-            <Route activeClassName="active-link" exact path={cardUrl} component={ShoppingCard}/>
-            <Route activeClassName="active-link" exact path={searchUrl} component={SearchPage}/>
-            <MobileMenu/>
-            <SideShoppingCard/>
-        </Container>
+            <Container fluid={true}>
+                <Route exact path={productsUrl} component={Store}/>
+                <Route exact path={productsUrl + '/:id'} component={Product}/>
+                <Route exact path={cardUrl} component={ShoppingCard}/>
+                <Route exact path={searchUrl} component={SearchPage}/>
+                <MobileMenu/>
+                <SideShoppingCard/>
+            </Container>
+        </>
     )
 }
 

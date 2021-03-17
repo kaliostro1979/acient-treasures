@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import ItemCountLabel from "./ItemsCountLabel";
 import {useDispatch, useSelector} from "react-redux";
 import {ancientEgyptUrl, celticsUrl, productsUrl, saleUrl, vikingsUrl} from "../../../URL";
@@ -13,11 +13,11 @@ const NavigationMenu = () => {
     return (
         <div className="navigation-menu_main">
             <ul className="navigation-items__list">
-                <li><Link to={productsUrl}>Store</Link></li>
-                <li><Link to={vikingsUrl}>Vikings</Link></li>
-                <li><Link to={ancientEgyptUrl}>Ancient Egypt</Link></li>
-                <li><Link to={celticsUrl}>Celtics</Link></li>
-                <li><Link to={saleUrl}>Sale</Link></li>
+                <li><NavLink activeStyle to={productsUrl}>Store</NavLink></li>
+                <li><NavLink to={vikingsUrl}>Vikings</NavLink></li>
+                <li><NavLink to={ancientEgyptUrl}>Ancient Egypt</NavLink></li>
+                <li><NavLink to={celticsUrl}>Celtics</NavLink></li>
+                <li><NavLink to={saleUrl}>Sale</NavLink></li>
             </ul>
             <div className="navigation-icons">
                 <ul>

@@ -4,6 +4,7 @@ import {fetchAllItems, filterAllItems} from "../../redux/actions/getAllItems";
 import StoreItem from "./StoreItem";
 import ItemsCategoryFilter from "../../components/Filters/ItemsCategoryFilters";
 import {Row, Col} from 'react-bootstrap'
+import Search from "../../components/Search field/Search";
 
 
 const Store = () => {
@@ -17,8 +18,10 @@ const Store = () => {
 
     return (
         <Row>
+
             <Col lg={2}>
                 <div className="filters-wrapper">
+                    <Search/>
                     <ItemsCategoryFilter allItems={allItems} filter={filter}/>
                 </div>
             </Col>
