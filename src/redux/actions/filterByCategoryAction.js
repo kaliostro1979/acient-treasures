@@ -1,10 +1,11 @@
 import {FILTER_BY_CATEGORY} from "../types";
 import {fetchAllItems} from "./getAllItems";
 
-
+let filterArray = []
 export const filter = (value, checked, allItems)=>{
-    console.log(value);
-    console.log(checked);
+    filterArray = [...filterArray, value]
+    console.log(filterArray);
+    console.log(allItems);
     let filteredItems = []
     return (dispatch)=>{
         if(allItems){
@@ -13,7 +14,7 @@ export const filter = (value, checked, allItems)=>{
             })]
         }
 
-        dispatch(filterByCategory(filteredItems))
+        /*dispatch(filterByCategory(filteredItems))*/
     }
 }
 

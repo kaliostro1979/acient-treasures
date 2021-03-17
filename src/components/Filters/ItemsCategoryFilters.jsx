@@ -6,10 +6,18 @@ import {filter} from "../../redux/actions/filterByCategoryAction";
 const ItemsCategoryFilter = (props) => {
 
     const dispatch = useDispatch()
-
-    const handleChange = (e) => {
+    const [value, setValue] = useState([])
+    /*const handleChange = (e) => {
         dispatch(filter(e.target.value, e.target.checked, props.allItems))
+    }*/
+    const newValue = []
+    const handleChange = (e) => {
+        const currentValue = e.target.value
+        newValue.push(currentValue)
+        setValue(newValue)
+        dispatch(filter(currentValue, e.target.checked, props.allItems))
     }
+
 
     return (
         <ul className="category_filter">
@@ -21,11 +29,17 @@ const ItemsCategoryFilter = (props) => {
                 </label>
             </li>
             <li>
-
                 <label htmlFor="chains">
                     <input type="checkbox" id="chains" onChange={handleChange} value="chains"/>
                     <span className="fake"> </span>
                     <span className="checkbox_name">Chains</span>
+                </label>
+            </li>
+            <li>
+                <label htmlFor="neck">
+                    <input type="checkbox" id="neck" onChange={handleChange} value="neck"/>
+                    <span className="fake"> </span>
+                    <span className="checkbox_name">Neck</span>
                 </label>
             </li>
         </ul>
