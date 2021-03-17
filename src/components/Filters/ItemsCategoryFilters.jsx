@@ -3,27 +3,32 @@ import {useDispatch} from "react-redux";
 import {filter} from "../../redux/actions/filterByCategoryAction";
 
 
-
 const ItemsCategoryFilter = (props) => {
-
 
     const dispatch = useDispatch()
 
-
-
-    const handleChange = (e)=>{
+    const handleChange = (e) => {
         dispatch(filter(e.target.value, e.target.checked, props.allItems))
     }
 
-
-
     return (
-        <>
-            <input type="checkbox" id="rings" onChange={handleChange} value="rings"/>
-            <label htmlFor="rings">Rings</label>
-            <input type="checkbox" id="chains" onChange={handleChange} value="chains"/>
-            <label htmlFor="chains">Chains</label>
-        </>
+        <ul className="category_filter">
+            <li>
+                <label htmlFor="rings">
+                    <input type="checkbox" id="rings" onChange={handleChange} value="rings"/>
+                    <span className="fake"> </span>
+                    <span className="checkbox_name">Rings</span>
+                </label>
+            </li>
+            <li>
+
+                <label htmlFor="chains">
+                    <input type="checkbox" id="chains" onChange={handleChange} value="chains"/>
+                    <span className="fake"> </span>
+                    <span className="checkbox_name">Chains</span>
+                </label>
+            </li>
+        </ul>
     )
 }
 

@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {filterAllItems} from "../../redux/actions/getAllItems";
 import StoreItem from "./StoreItem";
 import ItemsCategoryFilter from "../../components/Filters/ItemsCategoryFilters";
+import {Container, Row, Col} from 'react-bootstrap'
 
 const Store = () => {
     const allItems = useSelector(state => state.allItems)
@@ -13,18 +14,28 @@ const Store = () => {
     }, [dispatch])
 
     return (
-        <div className="store-wrapper">
-            <ItemsCategoryFilter allItems={allItems}/>
-            <div className="store">
-                {
-                    allItems.map((item) => {
-                        return (
-                            <StoreItem item={item} key={Math.random()}/>
-                        )
-                    })
-                }
-            </div>
-        </div>
+
+        <Row>
+            <Col lg={2}>
+                <div className="filters-wrapper">
+                    <h4>Filter by category</h4>
+                    <ItemsCategoryFilter allItems={allItems}/>
+                </div>
+            </Col>
+            <Col lg={10}>
+                <Row>
+                    {
+                        allItems.map((item) => {
+                            return (
+                                <Col lg={3} key={Math.random()}>
+                                    <StoreItem item={item}/>
+                                </Col>
+                            )
+                        })
+                    }
+                </Row>
+            </Col>
+        </Row>
     )
 }
 

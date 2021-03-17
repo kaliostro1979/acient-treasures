@@ -90,3 +90,45 @@
   width: 32px;
   display: none;
 }
+
+
+/*---- Category Filter ----*/
+
+
+.category_filter{
+  margin-top: 40px;
+  li{
+    label{
+      display: flex;
+      align-items: center;
+      input{
+        display: none;
+        &:checked + .fake:before{
+          opacity: 1;
+        }
+      }
+      .fake{
+        position: relative;
+        border: solid 1px #000000;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        &::before{
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 10px;
+          height: 10px;
+          background: $red;
+          opacity: 0;
+          transition: .3s;
+        }
+      }
+      .checkbox_name{
+        font-size: 18px;
+      }
+    }
+  }
+}

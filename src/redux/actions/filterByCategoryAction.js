@@ -8,9 +8,9 @@ export const filter = (value, checked, allItems)=>{
     let filteredItems = []
     return (dispatch)=>{
         if(allItems){
-            filteredItems = allItems.filter((item)=>{
+            filteredItems = [...allItems.filter((item)=>{
                 return checked ? item.category.match(value) : dispatch(fetchAllItems())
-            })
+            })]
         }
 
         dispatch(filterByCategory(filteredItems))

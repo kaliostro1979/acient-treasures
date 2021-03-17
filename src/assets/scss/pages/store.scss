@@ -2,17 +2,8 @@
 
 @import "../templates";
 
-.store-wrapper{
-  padding: 30px 111px;
-  .store{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
 
 .storeItem{
-  width: 23%;
   display: block;
   text-align: center;
   padding: 30px;
@@ -54,4 +45,8 @@
 
 .search-main-open{
   display: block;
+}
+
+.filters-wrapper{
+  padding: 30px;
 }

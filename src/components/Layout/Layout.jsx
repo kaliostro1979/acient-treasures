@@ -8,6 +8,7 @@ import Store from "../../Pages/Store/Store";
 import ShoppingCard from "../../Pages/ShoppingCard/ShoppingCard";
 import {cardUrl, homeUrl, productsUrl, searchUrl} from "../../URL";
 import SearchPage from "../../Pages/Search/SearchPage";
+import {Container} from 'react-bootstrap'
 
 
 
@@ -15,7 +16,7 @@ import SearchPage from "../../Pages/Search/SearchPage";
 const Layout = ()=>{
 
     return (
-        <>
+        <Container fluid={true}>
             <Route activeClassName="active-link" exact path={homeUrl} component={Home}/>
             <Route activeClassName="active-link" exact path={productsUrl} component={Store}/>
             <Route activeClassName="active-link" exact path={productsUrl + '/:id'} component={Product}/>
@@ -23,7 +24,7 @@ const Layout = ()=>{
             <Route activeClassName="active-link" exact path={searchUrl} component={SearchPage}/>
             <MobileMenu/>
             <SideShoppingCard/>
-        </>
+        </Container>
     )
 }
 
