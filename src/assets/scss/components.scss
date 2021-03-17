@@ -23,6 +23,7 @@
 
     a {
       font-size: 21px;
+      font-weight: 400;
     }
 
     &:last-child {
@@ -96,7 +97,7 @@
 
 
 .category_filter{
-  margin-top: 40px;
+  margin-top: 20px;
   li{
     label{
       display: flex;
@@ -132,3 +133,57 @@
     }
   }
 }
+
+
+/* ---- Filter by Price ----*/
+
+
+
+.price-filter{
+
+  /* Chrome, Safari, Edge, Opera */
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    &:focus{
+      outline: none;
+    }
+  }
+
+  /* Firefox */
+
+  input[type=number] {
+    width: 100%;
+    -moz-appearance: textfield;
+    margin-top: 15px;
+    padding: 2px 4px;
+    &:focus{
+      outline: none;
+    }
+    &::placeholder{
+      font-size: 13px;
+      line-height: 32px;
+    }
+  }
+
+  .price-filter__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .price-filter__input-wrapper{
+      width: 80px;
+    }
+    button{
+      border: none;
+      outline: none;
+      background-color: $red;
+      color: $white;
+      padding: 4px 8px;
+      border-radius: 3px;
+    }
+  }
+}
+
+

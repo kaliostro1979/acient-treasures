@@ -128,5 +128,83 @@
     "calculatedPrice": 9.95,
     "quantity": "1",
     "category": "rings"
+  },
+
+  {
+    "id": 8,
+    "title": "NATIVE AMERICAN ETHNIC FEATHER DANGLE EARRINGS",
+    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
+    "image" : "http://localhost:3000/assets/images/item-images/dangle_earrnings/1.jpg",
+    "images": [
+      "http://localhost:3000/assets/images/item-images/dangle_earrnings/1.jpg",
+      "http://localhost:3000/assets/images/item-images/dangle_earrnings/2.jpg",
+      "http://localhost:3000/assets/images/item-images/dangle_earrnings/3.jpg",
+      "http://localhost:3000/assets/images/item-images/dangle_earrnings/4.jpg",
+      "http://localhost:3000/assets/images/item-images/dangle_earrnings/5.jpg",
+      "http://localhost:3000/assets/images/item-images/dangle_earrnings/6.png",
+      "http://localhost:3000/assets/images/item-images/dangle_earrnings/7.jpg"
+    ],
+    "price": 15.95,
+    "offerPrice": 9.95,
+    "calculatedPrice": 9.95,
+    "quantity": "1",
+    "category": "earrings"
+  },
+
+  {
+    "id": 9,
+    "title": "STAINLESS STEEL CAT ON TRIQUETRA CELTIC EARRINGS",
+    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
+    "image" : "http://localhost:3000/assets/images/item-images/celtic_earrings/1.jpg",
+    "images": [
+      "http://localhost:3000/assets/images/item-images/celtic_earrings/1.jpg",
+      "http://localhost:3000/assets/images/item-images/celtic_earrings/2.jpg",
+      "http://localhost:3000/assets/images/item-images/celtic_earrings/3.jpg",
+      "http://localhost:3000/assets/images/item-images/celtic_earrings/4.jpg",
+      "http://localhost:3000/assets/images/item-images/celtic_earrings/5.jpg"
+    ],
+    "price": 15.95,
+    "offerPrice": 9.95,
+    "calculatedPrice": 9.95,
+    "quantity": "1",
+    "category": "earrings"
+  },
+
+  {
+    "id": 10,
+    "title": "SOLID STAINLESS STEEL KING'S CHAIN WOLF HEAD BRACELET",
+    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
+    "image" : "http://localhost:3000/assets/images/item-images/kings_bracelet/1.jpg",
+    "images": [
+      "http://localhost:3000/assets/images/item-images/kings_bracelet/1.jpg",
+      "http://localhost:3000/assets/images/item-images/kings_bracelet/2.jpg",
+      "http://localhost:3000/assets/images/item-images/kings_bracelet/3.jpg",
+      "http://localhost:3000/assets/images/item-images/kings_bracelet/4.jpg",
+      "http://localhost:3000/assets/images/item-images/kings_bracelet/5.jpg",
+      "http://localhost:3000/assets/images/item-images/kings_bracelet/6.jpg"
+    ],
+    "price": 15.95,
+    "offerPrice": 9.95,
+    "calculatedPrice": 9.95,
+    "quantity": "1",
+    "category": "bracelets"
+  },
+
+  {
+    "id": 11,
+    "title": "GERI & FREKI VIKING BRACELET",
+    "description": "Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!\nThe Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by link.\nThe hand made chain connects together with a lobster clamp.",
+    "image" : "http://localhost:3000/assets/images/item-images/viking_bracelet/1.jpg",
+    "images": [
+      "http://localhost:3000/assets/images/item-images/viking_bracelet/1.jpg",
+      "http://localhost:3000/assets/images/item-images/viking_bracelet/2.jpg",
+      "http://localhost:3000/assets/images/item-images/viking_bracelet/3.jpg",
+      "http://localhost:3000/assets/images/item-images/viking_bracelet/4.jpg"
+    ],
+    "price": 15.95,
+    "offerPrice": 9.95,
+    "calculatedPrice": 9.95,
+    "quantity": "1",
+    "category": "bracelets"
   }
 ]

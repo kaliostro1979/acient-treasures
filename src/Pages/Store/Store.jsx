@@ -20,7 +20,6 @@ const Store = () => {
         <Row>
             <Col lg={2}>
                 <div className="filters-wrapper">
-                    <h4>Filter by category</h4>
                     <ItemsCategoryFilter allItems={allItems} filter={filter}/>
                 </div>
             </Col>
@@ -29,7 +28,7 @@ const Store = () => {
                     {
                         allItems.map((item) => {
                             return (
-                                <Col lg={3} key={Math.random()}>
+                                <Col md={3} sm={4} sm="4" key={Math.random()}>
                                     <StoreItem item={item}/>
                                 </Col>
                             )

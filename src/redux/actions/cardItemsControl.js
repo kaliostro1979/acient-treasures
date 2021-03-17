@@ -7,12 +7,10 @@ export const handleAddToCard = ()=>{
     return (dispatch)=>{
         const currentStr = localStorage.getItem('currentItem')
         const current = JSON.parse(currentStr)
-        console.log(current);
         cardItems.push(current)
         localStorage.setItem('cardItems', JSON.stringify(cardItems))
         dispatch(cardItemsControl(cardItems))
         dispatch(fetchCardItems())
-        console.log(cardItems);
     }
 }
 

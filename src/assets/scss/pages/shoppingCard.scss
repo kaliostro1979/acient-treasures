@@ -7,6 +7,8 @@
     .side-card{
       padding: 0;
       height: auto;
+      overflow: hidden;
+      border: solid 1px #ededed;
     }
     .side-card__header{
       display: none;
