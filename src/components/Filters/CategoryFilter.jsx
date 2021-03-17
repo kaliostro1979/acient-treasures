@@ -13,7 +13,7 @@ const CategoryFilter = (props)=>{
 
 
     return(
-        <>
+        <div className="filter-wrapper">
             <h4>Filter by category</h4>
             <ul className="category_filter">
                 <li>
@@ -45,7 +45,7 @@ const CategoryFilter = (props)=>{
                     </label>
                 </li>
             </ul>
-        </>
+        </div>
     )
 }
 

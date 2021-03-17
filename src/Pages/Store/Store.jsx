@@ -10,20 +10,19 @@ const Store = () => {
     const allItems = useSelector(state => state.allItems)
     const filter = useSelector(state => state.filter)
     const dispatch = useDispatch()
-
+    console.log(allItems);
     useEffect(() => {
         dispatch(fetchAllItems())
     }, [dispatch])
 
     return (
-
         <Row>
             <Col lg={2}>
                 <div className="filters-wrapper">
                     <ItemsCategoryFilter allItems={allItems} filter={filter}/>
                 </div>
             </Col>
-            <Col lg={10}>
+            {allItems.length > 0 ? <Col lg={10}>
                 <Row>
                     {
                         allItems.map((item) => {
@@ -35,7 +34,7 @@ const Store = () => {
                         })
                     }
                 </Row>
-            </Col>
+            </Col> : <Col lg={10}><h3>Sorry no results</h3></Col>}
         </Row>
     )
 }

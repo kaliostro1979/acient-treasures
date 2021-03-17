@@ -27,7 +27,7 @@ const PriceFilter = ()=>{
 
 
     return(
-        <>
+        <div className="filter-wrapper">
             <h4>Filter by price</h4>
             <Form className="price-filter" onSubmit={handlePriceFilterSubmit}>
                 <div className="price-filter__wrapper">
@@ -40,7 +40,7 @@ const PriceFilter = ()=>{
                     <button type="submit">Filter</button>
                 </div>
             </Form>
-        </>
+        </div>
     )
 }
 
