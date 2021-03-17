@@ -5,13 +5,14 @@ import StoreItem from "./StoreItem";
 import ItemsCategoryFilter from "../../components/Filters/ItemsCategoryFilters";
 import {Row, Col} from 'react-bootstrap'
 import Search from "../../components/Search field/Search";
+import SiteSearch from "../../components/Search field/SiteSearch";
 
 
 const Store = () => {
     const allItems = useSelector(state => state.allItems)
     const filter = useSelector(state => state.filter)
     const dispatch = useDispatch()
-    console.log(allItems);
+
     useEffect(() => {
         dispatch(fetchAllItems())
     }, [dispatch])
@@ -25,7 +26,9 @@ const Store = () => {
                     <ItemsCategoryFilter allItems={allItems} filter={filter}/>
                 </div>
             </Col>
-            {allItems.length > 0 ? <Col lg={10}>
+            <Col lg={10}>
+            {allItems.length > 0 ?
+
                 <Row>
                     {
                         allItems.map((item) => {
@@ -37,7 +40,9 @@ const Store = () => {
                         })
                     }
                 </Row>
-            </Col> : <Col lg={10}><h3>Sorry no results</h3></Col>}
+            : <h3>Sorry no results</h3>
+            }
+            </Col>
         </Row>
     )
 }

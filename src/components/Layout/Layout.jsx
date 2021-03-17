@@ -8,15 +8,23 @@ import Store from "../../Pages/Store/Store";
 import ShoppingCard from "../../Pages/ShoppingCard/ShoppingCard";
 import {cardUrl, homeUrl, productsUrl, searchUrl} from "../../URL";
 import SearchPage from "../../Pages/Search/SearchPage";
-import {Container} from 'react-bootstrap'
+import {Col, Container, Row} from 'react-bootstrap'
+import SiteSearch from "../Search field/SiteSearch";
+import {useSelector} from "react-redux";
 
 
 const Layout = () => {
 
+    const searchField = useSelector(state=>state.searchField)
+
     return (
         <>
-            <Route activeClassName="active-link" exact path={homeUrl} component={Home}/>
             <Container fluid={true}>
+                <Row>
+                    <Col lg={{order: 10, offset: 2}}>
+                        <SiteSearch searchField={searchField}/>
+                    </Col>
+                </Row>
                 <Route exact path={productsUrl} component={Store}/>
                 <Route exact path={productsUrl + '/:id'} component={Product}/>
                 <Route exact path={cardUrl} component={ShoppingCard}/>
@@ -24,6 +32,7 @@ const Layout = () => {
                 <MobileMenu/>
                 <SideShoppingCard/>
             </Container>
+            <Route activeClassName="active-link" exact path={homeUrl} component={Home}/>
         </>
     )
 }

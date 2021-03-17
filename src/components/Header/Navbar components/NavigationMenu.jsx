@@ -13,7 +13,7 @@ const NavigationMenu = () => {
     return (
         <div className="navigation-menu_main">
             <ul className="navigation-items__list">
-                <li><NavLink activeStyle to={productsUrl}>Store</NavLink></li>
+                <li><NavLink to={productsUrl}>Store</NavLink></li>
                 <li><NavLink to={vikingsUrl}>Vikings</NavLink></li>
                 <li><NavLink to={ancientEgyptUrl}>Ancient Egypt</NavLink></li>
                 <li><NavLink to={celticsUrl}>Celtics</NavLink></li>

@@ -8,7 +8,6 @@
   text-align: center;
   padding: 30px;
   border: solid 1px #ededed;
-  margin: 10px;
   &:hover{
     background-color: #ededed;
   }
@@ -53,5 +52,38 @@
     display: block;
     margin: 0;
     width: 100%;
+  }
+}
+
+.site-search__wrapper{
+  max-height: 0;
+  overflow: hidden;
+  transition: .5s linear;
+  &.site-search__wrapper-open{
+    max-height: 200px;
+  }
+  form{
+    display: flex;
+    align-items: baseline;
+    input{
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #ededed;
+      padding: 10px 20px;
+      color: $global_font_family;
+      margin-bottom: 20px;
+      &:focus{
+        outline: none;
+      }
+    }
+    button{
+      background: $red;
+      border: none;
+      border-radius: 4px;
+      color: $white;
+      padding: 5px 20px;
+      margin-left: 30px;
+    }
   }
 }
