@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {useDispatch} from "react-redux";
 import {filter} from "../../redux/actions/filterByCategoryAction";
 
@@ -6,15 +6,9 @@ import {filter} from "../../redux/actions/filterByCategoryAction";
 const ItemsCategoryFilter = (props) => {
 
     const dispatch = useDispatch()
-    const [value, setValue] = useState([])
-    /*const handleChange = (e) => {
-        dispatch(filter(e.target.value, e.target.checked, props.allItems))
-    }*/
-    const newValue = []
+
     const handleChange = (e) => {
         const currentValue = e.target.value
-        newValue.push(currentValue)
-        setValue(newValue)
         dispatch(filter(currentValue, e.target.checked, props.allItems))
     }
 

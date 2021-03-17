@@ -14,7 +14,7 @@ const Search = ()=>{
 
     useEffect(()=>{
         dispatch(filterAllItems(input))
-    },[input])
+    },[input, dispatch])
 
 
     return(

@@ -1,16 +1,18 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from "react-redux";
-import {filterAllItems} from "../../redux/actions/getAllItems";
+import {fetchAllItems, filterAllItems} from "../../redux/actions/getAllItems";
 import StoreItem from "./StoreItem";
 import ItemsCategoryFilter from "../../components/Filters/ItemsCategoryFilters";
-import {Container, Row, Col} from 'react-bootstrap'
+import {Row, Col} from 'react-bootstrap'
+
 
 const Store = () => {
     const allItems = useSelector(state => state.allItems)
+    const filter = useSelector(state => state.filter)
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(filterAllItems())
+        dispatch(fetchAllItems())
     }, [dispatch])
 
     return (
@@ -19,7 +21,7 @@ const Store = () => {
             <Col lg={2}>
                 <div className="filters-wrapper">
                     <h4>Filter by category</h4>
-                    <ItemsCategoryFilter allItems={allItems}/>
+                    <ItemsCategoryFilter allItems={allItems} filter={filter}/>
                 </div>
             </Col>
             <Col lg={10}>

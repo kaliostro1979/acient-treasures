@@ -8,6 +8,7 @@ import {cardAllItemsReducer} from "./reducers/cardAllItems";
 import {addToShoppingCardReducer} from "./reducers/cardItemsControlReducer";
 import {searchFieldReducer} from "./reducers/searchField";
 
+
 export const rootReducer = combineReducers({
     mobileMenu: mobileMenu,
     sideShoppingCard: sideShoppingCardReducer,
