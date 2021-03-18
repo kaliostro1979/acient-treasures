@@ -27,7 +27,7 @@ const Product = () => {
                 <div className="product-info">
                     <ProductTitle current={current}/>
                     <div className="product-control__wrapper">
-                        <ProductSelectBox/>
+                        <ProductSelectBox current={current}/>
                         <ProductPrices current={current}/>
                         <div className="product-info__control">
                             <ItemCounter current={current}/>

@@ -67,7 +67,6 @@
       appearance: none;
       -wbkit-appearance: none;
       -moz-appearance: none;
-
       &:focus {
         outline: none;
       }
@@ -76,6 +75,11 @@
     &-wrapper {
       width: 293px;
       position: relative;
+      &.hidden{
+        &:after{
+          display: none;
+        }
+      }
 
       &:after {
         content: '';

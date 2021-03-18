@@ -6,6 +6,7 @@ import ItemsCategoryFilter from "../../components/Filters/ItemsCategoryFilters";
 import {Row, Col} from 'react-bootstrap'
 import Search from "../../components/Search field/Search";
 import SiteSearch from "../../components/Search field/SiteSearch";
+import ProductSelectBox from "../Product/ProductSelectBox";
 
 
 const Store = () => {
@@ -27,20 +28,25 @@ const Store = () => {
                 </div>
             </Col>
             <Col lg={10}>
+                {/*<Row>
+                    <Col lg={12}>
+                        <ProductSelectBox/>
+                    </Col>
+                </Row>*/}
             {allItems.length > 0 ?
-
                 <Row>
                     {
                         allItems.map((item) => {
                             return (
-                                <Col md={3} sm={4} sm="4" key={Math.random()}>
+                                <Col md={3} sm={4} className="mb-4" key={Math.random()}>
                                     <StoreItem item={item}/>
                                 </Col>
                             )
                         })
                     }
                 </Row>
-            : <h3>Sorry no results</h3>
+            :
+                <h3>Sorry no results</h3>
             }
             </Col>
         </Row>

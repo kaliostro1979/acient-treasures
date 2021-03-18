@@ -16,7 +16,8 @@
     "calculatedPrice": 19.95,
     "offerPrice": 19.95,
     "quantity": "1",
-    "category": "chains"
+    "category": "chains",
+    "lengths": ["60 CM (24 INCHES)", "60 CM (26 INCHES)", "60 CM (28 INCHES)"]
   },
   {
     "id": 2,
@@ -35,7 +36,8 @@
     "offerPrice": 17.60,
     "calculatedPrice": 17.60,
     "quantity": "1",
-    "category": "chains"
+    "category": "chains",
+    "lengths": ["60 CM (24 INCHES)", "60 CM (26 INCHES)", "60 CM (28 INCHES)"]
   },
   {
     "id": 3,
@@ -54,7 +56,8 @@
     "offerPrice": 85.95,
     "calculatedPrice": 85.95,
     "quantity": "1",
-    "category": "chains"
+    "category": "chains",
+    "lengths": ["60 CM (24 INCHES)", "60 CM (26 INCHES)", "60 CM (28 INCHES)"]
   },
   {
     "id": 4,
@@ -187,7 +190,8 @@
     "offerPrice": 9.95,
     "calculatedPrice": 9.95,
     "quantity": "1",
-    "category": "bracelets"
+    "category": "bracelets",
+    "lengths": ["60 CM (24 INCHES)", "60 CM (26 INCHES)", "60 CM (28 INCHES)"]
   },
 
   {
@@ -205,6 +209,7 @@
     "offerPrice": 9.95,
     "calculatedPrice": 9.95,
     "quantity": "1",
-    "category": "bracelets"
+    "category": "bracelets",
+    "lengths": ["60 CM (24 INCHES)", "60 CM (26 INCHES)", "60 CM (28 INCHES)"]
   }
 ]
