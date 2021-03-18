@@ -8,15 +8,13 @@ import {Row, Col} from "react-bootstrap";
 const ShoppingCard = () => {
     return (
         <Row>
-            <Col lg={6}>
-            <div className="shoppingCard">
+            <Col lg={12} className="shoppingCard">
                 <SideShoppingCard/>
-                <div className="continue-shopping">
+                <div className="continue-shopping mt-5">
                     <Link to={productsUrl}>
                         Continue Shopping
                     </Link>
                 </div>
-            </div>
             </Col>
         </Row>
     )
